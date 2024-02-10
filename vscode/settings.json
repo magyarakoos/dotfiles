@@ -2,5 +2,6 @@
     "editor.fontFamily": "'Cascadia Mono', 'monospace', monospace",
     "files.autoSave": "afterDelay",
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "One Dark Pro"
+    "workbench.colorTheme": "One Dark Pro",
+    "git.openRepositoryInParentFolders": "always"
 }
