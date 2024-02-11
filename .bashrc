@@ -40,6 +40,6 @@ PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2
 # --- launch logic --- #
 export PATH=$PATH:~/.bash
 bind -s 'set completion-ignore-case on '
-# autosync-repos.sh >/dev/null 2>&1 &
-# disown
+autosync-repos.sh >/dev/null 2>&1 &
+disown
 # -------------------- #
