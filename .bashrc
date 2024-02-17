@@ -21,7 +21,7 @@ alias pq='pacman -Q | fzf'
 alias upd='sudo pacman -Sy'
 alias update='sudo pacman -Syu && yay -Syu'
 
-alias cppmain='[ -e main.cpp ] || { cp ~/.config/Code/User/snippets/template.cpp main.cpp && code main.cpp }'
+alias cppmain='([ -e main.cpp ] || { cp ~/.config/Code/User/snippets/template.cpp main.cpp && code main.cpp })'
 alias cppcomp='g++ -o main -std=c++20 -Wall -Wextra -Werror -fsanitize=undefined -O3 -DLOCAL main.cpp'
 alias cpprun='cppcomp && ./main'
 
