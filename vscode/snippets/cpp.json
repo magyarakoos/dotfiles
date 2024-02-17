@@ -1,0 +1,52 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Read into container": {
+		"prefix": "cinv",
+		"body": [
+			"for (${1:auto}& e : ${2:v}) cin >> e;",
+			"$0"
+		]
+	},
+	"Print the contents of a container": {
+		"prefix": "logv",
+		"body": [
+			"for (${1:auto&} e : ${2:v}) cout << e << ' ';",
+			"cout << '\n';",
+			"$0"
+		]
+	},
+	"Reduce sum container": {
+		"prefix": "rsum",
+		"body": [
+			"accumulate(all(${1:v}), 0)"
+		]
+	},
+	"Reduce product container": {
+		"prefix": "rprod",
+		"body": [
+			"accumulate(all(${1:v}), 1, multiplies<${2:int}>())"
+		]
+	},
+	"Iterate two-dimensional container": {
+		"prefix": "iter2d",
+		"body": [
+			"for (int ${1:i} = 0; ${1:i} < ${2:N}; ${1:i}++) {",
+			"\tfor (int ${3:j} = 0; ${3:j} < ${4:M}; ${3:j}++) {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	}
+}
