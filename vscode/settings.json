@@ -3,5 +3,6 @@
     "files.autoSave": "afterDelay",
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "One Dark Pro",
-    "git.openRepositoryInParentFolders": "always"
+    "git.openRepositoryInParentFolders": "always",
+    "explorer.confirmDelete": false
 }
