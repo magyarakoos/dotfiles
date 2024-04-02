@@ -7,5 +7,6 @@
     "explorer.confirmDelete": false,
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "security.workspace.trust.untrustedFiles": "open",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "git.confirmSync": false
 }
