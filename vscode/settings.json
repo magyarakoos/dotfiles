@@ -8,5 +8,6 @@
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "security.workspace.trust.untrustedFiles": "open",
     "git.autofetch": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true
 }
