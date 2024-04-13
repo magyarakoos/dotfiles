@@ -16,6 +16,7 @@
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": false,
     "editor.unicodeHighlight.allowedCharacters": {
-        "σ": true
+        "σ": true,
+        "ρ": true
     }
 }
