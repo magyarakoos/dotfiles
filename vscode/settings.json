@@ -14,5 +14,8 @@
         "language-julia.interrupt"
     ],
     "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false
+    "julia.enableTelemetry": false,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    }
 }
