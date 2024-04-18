@@ -4,5 +4,10 @@
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "One Dark Pro",
     "git.openRepositoryInParentFolders": "always",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false
 }
