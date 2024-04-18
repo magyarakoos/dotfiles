@@ -9,5 +9,6 @@
         "language-julia.interrupt"
     ],
     "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false
+    "julia.enableTelemetry": false,
+    "julia.enableCrashReporter": true
 }
