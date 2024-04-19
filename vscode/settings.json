@@ -17,6 +17,7 @@
     "julia.enableTelemetry": false,
     "editor.unicodeHighlight.allowedCharacters": {
         "σ": true,
-        "ρ": true
+        "ρ": true,
+        "∪": true
     }
 }
