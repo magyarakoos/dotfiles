@@ -10,5 +10,6 @@
     ],
     "julia.symbolCacheDownload": true,
     "julia.enableTelemetry": false,
-    "julia.enableCrashReporter": true
+    "julia.enableCrashReporter": true,
+    "workbench.startupEditor": "none"
 }
