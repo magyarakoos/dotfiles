@@ -19,5 +19,6 @@
         "σ": true,
         "ρ": true,
         "∪": true
-    }
+    },
+    "workbench.startupEditor": "none"
 }
