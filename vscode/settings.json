@@ -20,5 +20,6 @@
         "ρ": true,
         "∪": true
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "diffEditor.ignoreTrimWhitespace": false
 }
