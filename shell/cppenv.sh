@@ -3,8 +3,6 @@
 clear
 g++ -o main main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow 
 
-time ./main < ../input && rm ./main
-
 output=$(time ./main < ../input)
 
 real_time=$(echo "$output" | grep real | awk '{print $2}')
