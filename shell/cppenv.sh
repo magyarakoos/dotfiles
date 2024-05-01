@@ -3,6 +3,8 @@
 clear
 g++ -o main main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow 
 
+./main < ../input
+
 # Run the program and capture time
 { time ./main < ../input > /dev/null; } 2> time_output.txt
 
@@ -13,7 +15,7 @@ real_time=$(grep real time_output.txt | awk '{print $2}')
 real_time_ms=$(echo "$real_time" | awk -F 'm|s' '{printf "%.0f\n", ($1 * 60 + $2) * 1000}')
 
 # Display time taken
-echo -e "Time taken: ${real_time_ms}ms"
+echo -e "\nTime taken: ${real_time_ms}ms"
 
 # Clean up
 rm main time_output.txt
