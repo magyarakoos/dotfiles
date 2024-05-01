@@ -20,5 +20,20 @@
             }
         ]
     },
-    "saveAndRun": {}
+    "saveAndRun": {
+        "commands": [
+          {
+            "match": ".*",
+            "cmd": "echo 'I run for all files.'",
+            "useShortcut": false,
+            "silent": false
+          },
+          {
+            "match": "\\.txt$",
+            "cmd": "echo 'I am a .txt file ${file}.'",
+            "useShortcut": false,
+            "silent": false
+          }
+        ]
+      }
 }
