@@ -12,11 +12,10 @@
   "julia.enableCrashReporter": true,
   "workbench.startupEditor": "none",
   "saveAndRun": {
-
     "commands": [
       {
         "match": "main.cpp",
-        "cmd": "c && g++ -o main main.cpp -std=c++20 -fsanitize=undefined -Wall && ./main < ../input && echo && rm ./main",
+        "cmd": "c && g++ -o main main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow && time ./main < ../input && echo && rm ./main",
         "useShortcut": false,
         "silent": false
       }
