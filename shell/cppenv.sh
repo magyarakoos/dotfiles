@@ -4,7 +4,7 @@ clear
 g++ -o main main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow 
 
 # Run the program and capture time
-{ time ./main < ../input; } 2> time_output.txt
+{ time ./main < ../input > /dev/null; } 2> time_output.txt
 
 # Extract real time from output
 real_time=$(grep real time_output.txt | awk '{print $2}')
