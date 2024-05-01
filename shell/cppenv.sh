@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-g++ -o main main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow 
+g++ -o main *main.cpp -std=c++20 -fsanitize=undefined -fsanitize=address -Wall -Wshadow 
 
 ./main < ../input
 
