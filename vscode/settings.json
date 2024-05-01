@@ -14,7 +14,7 @@
   "saveAndRun": {
     "commands": [
       {
-        "match": "*.cpp",
+        "match": "main.cpp",
         "cmd": "echo 'I run for all files.'",
         "useShortcut": false,
         "silent": false
