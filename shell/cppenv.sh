@@ -13,7 +13,7 @@ real_time=$(grep real time_output.txt | awk '{print $2}')
 real_time_ms=$(echo "$real_time" | awk -F 'm|s' '{printf "%.0f\n", ($1 * 60 + $2) * 1000}')
 
 # Display time taken
-echo "\n\nTime taken: ${real_time_ms}ms"
+echo -e "\n\nTime taken: ${real_time_ms}ms"
 
 # Clean up
 rm main time_output.txt
