@@ -20,6 +20,5 @@
         "silent": false
       }
     ]
-  },
-  "files.autoSave": "afterDelay"
+  }
 }
