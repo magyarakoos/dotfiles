@@ -11,5 +11,13 @@
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": true,
     "workbench.startupEditor": "none",
-    "emeraldwalk.runonsave": {}
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*",
+                "isAsync": true,
+                "cmd": "echo 'I run for all files.'"
+            }
+        ]
+    }
 }
