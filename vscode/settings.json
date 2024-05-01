@@ -1,24 +1,24 @@
 {
-    "editor.fontFamily": "'Cascadia Mono', 'monospace', monospace",
-    "editor.minimap.enabled": false,
-    "workbench.colorTheme": "One Dark Pro",
-    "git.openRepositoryInParentFolders": "always",
-    "explorer.confirmDelete": false,
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false,
-    "julia.enableCrashReporter": true,
-    "workbench.startupEditor": "none",
-    "saveAndRun": {
-        "commands": [
-          {
-            "match": ".*",
-            "cmd": "echo 'I run for all files.'",
-            "useShortcut": false,
-            "silent": false
-          }
-        ]
+  "editor.fontFamily": "'Cascadia Mono', 'monospace', monospace",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "git.openRepositoryInParentFolders": "always",
+  "explorer.confirmDelete": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": false,
+  "julia.enableCrashReporter": true,
+  "workbench.startupEditor": "none",
+  "saveAndRun": {
+    "commands": [
+      {
+        "match": "*.cpp",
+        "cmd": "echo 'I run for all files.'",
+        "useShortcut": false,
+        "silent": false
       }
+    ]
+  }
 }
