@@ -15,7 +15,7 @@
     "commands": [
       {
         "match": "main.cpp",
-        "cmd": "cppenv.sh",
+        "cmd": "~/.bash/cppenv.sh",
         "useShortcut": false,
         "silent": false
       }
