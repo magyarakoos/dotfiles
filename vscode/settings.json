@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "'Cascadia Mono', 'monospace', monospace",
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "git.openRepositoryInParentFolders": "always",
+    "explorer.confirmDelete": false,
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true
+}
