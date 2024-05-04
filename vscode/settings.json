@@ -25,7 +25,7 @@
         "commands": [
           {
             "match": "*.cpp",
-            "cmd": "cppenv.sh",
+            "cmd": "echo Hi mom",
             "useShortcut": false,
             "silent": false
           }
