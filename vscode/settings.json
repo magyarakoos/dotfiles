@@ -21,5 +21,8 @@
         "∪": true
     },
     "workbench.startupEditor": "none",
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "saveAndRun": {
+        
+    }
 }
