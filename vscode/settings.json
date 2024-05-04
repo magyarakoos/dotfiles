@@ -24,7 +24,7 @@
     "saveAndRun": {
         "commands": [
           {
-            "match": "*.cpp",
+            "match": "*",
             "cmd": "echo Hi mom",
             "useShortcut": false,
             "silent": false
