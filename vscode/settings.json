@@ -24,8 +24,8 @@
     "saveAndRun": {
         "commands": [
           {
-            "match": "*",
-            "cmd": "echo Hi mom",
+            "match": "\\.cpp",
+            "cmd": "cppenv.sh",
             "useShortcut": false,
             "silent": false
           }
