@@ -3,31 +3,32 @@ using namespace std;
 
 template<class T>
 void debug_print(T arg, string arg_name) {
-    #ifndef LOCAL
-        return;
-    #endif
-
     cerr << "[ " << arg_name << " : ";
-
-    bool can_iter = decltype(begin(declval<T>()), end(declval<T>()), true);
-    if (can_iter) {
+    if (decltype(begin(declval<T>()), end(declval<T>()), true)) {
         for (const auto& item : arg) {
             cerr << "   [ " << item << " ]\n";
         }
     } else {
         cerr << item;
     }
-
     cerr << " ]" << endl;
 }
 
-#define DEBUG(...) do { \
-    debug(__VA_ARGS__, #__VA_ARGS__); \
+void debug() {
+    #ifndef LOCAL 
+        return;
+    #endif
+    
+}
+#define DEBUG(...) \
+    #ifdef LOCAL \
+     do { \
+    string labels[] = {__VA_ARGS__}; \
+    debug(__VA_ARGS__, labels); \
 } while(0)
 
 int main() {
     float PI = acos(-1.0);
     int x = 135;
     vector<int> list = {1, 5, 82, 5, 7};
-    DEBUG(PI, x, list);
 }
