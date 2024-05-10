@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-template<class T, class... Args>
-void debug(T arg, string arg_name, Args... args) {
+template<class T>
+void debug(T arg, string arg_name) {
     #ifndef LOCAL
         return;
     #endif
@@ -19,5 +19,4 @@ void debug(T arg, string arg_name, Args... args) {
     }
 
     cerr << " ]" << endl;
-    debug(args);
 }
