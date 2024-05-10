@@ -7,17 +7,17 @@ void debug(T arg, string arg_name, Args... args) {
         return;
     #endif
 
-    cout << "[ " << arg_name << " : ";
+    cerr << "[ " << arg_name << " : ";
 
     bool can_iter = decltype(begin(declval<T>()), end(declval<T>()), true);
     if (can_iter) {
         for (const auto& item : arg) {
-
+            cerr << "   [ " << item << " ]\n";
         }
     } else {
 
     }
 
-    cout << " ]\n";
+    cerr << " ]" << endl;
     debug(args);
 }
