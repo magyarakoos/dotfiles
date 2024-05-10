@@ -15,7 +15,7 @@ void debug(T arg, string arg_name, Args... args) {
             cerr << "   [ " << item << " ]\n";
         }
     } else {
-
+        cerr << item;
     }
 
     cerr << " ]" << endl;
