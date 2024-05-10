@@ -2,7 +2,7 @@
 using namespace std;
 
 template<class T>
-void debug(T arg, string arg_name) {
+void debug_print(T arg, string arg_name) {
     #ifndef LOCAL
         return;
     #endif
@@ -26,5 +26,8 @@ void debug(T arg, string arg_name) {
 } while(0)
 
 int main() {
-    
+    float PI = acos(-1.0);
+    int x = 135;
+    vector<int> list = {1, 5, 82, 5, 7};
+    DEBUG(PI, x, list);
 }
