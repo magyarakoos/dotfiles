@@ -2,8 +2,8 @@
 using namespace std;
 
 template<class T, class... Args>
-void debug(T arg1, Args... args) {
-#ifdef LOCAL
-    
+void debug(T arg, Args... args) {
+#ifndef LOCAL
+    cout << typeid(arg).name()
 #endif
 }
