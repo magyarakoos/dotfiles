@@ -20,3 +20,7 @@ void debug(T arg, string arg_name) {
 
     cerr << " ]" << endl;
 }
+
+#define DEBUG(...) do { \
+    debug(__VA_ARGS__, #__VA_ARGS__); \
+} while(0)
