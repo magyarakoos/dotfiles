@@ -13,30 +13,11 @@ void debug(T arg, string arg_name) {
     }
     cerr << " ]" << endl;
 }
-
-template<class T>
-void debug(vector<string> labels, vector<T> args) {
-    #ifndef LOCAL
-        return;
-    #endif
-
-    cerr << "[ ";
-    for (int i = 0; i < sizeof(labels); ++i) {
-        debug(arg, labels[i]);
-    }
-    cerr << " ]" << endl;
-}
-
-#define DEBUG(...) \
-do { \
-    string labels[] = {#__VA_ARGS__}; \
-    debug(labels, {__VA_ARGS__}); \
-} while(0)
-
+#define DEBUG(...) debug(__VA_ARGS__, #__VA_ARGS__)
 
 int main() {
     float PI = acos(-1.0);
     int x = 135;
     vector<int> list = {1, 5, 82, 5, 7};
-    DEBUG(PI, x, list);
+    DEBUG(PI);
 }
