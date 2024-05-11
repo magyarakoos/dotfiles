@@ -20,4 +20,6 @@ int main() {
     int x = 135;
     vector<int> list = {1, 5, 82, 5, 7};
     DEBUG(PI);
+    DEBUG(x);
+    DEBUG(list);
 }
