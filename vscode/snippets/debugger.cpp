@@ -28,12 +28,12 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 #define DEBUG(x) debug(x, #x)
 
 #define DB(...) do { \
-    string args = to_string(__VA_ARGS__); \
+    string args = "__VA_ARGS__"; \
 } while (0) \
 
 int main() {
     float PI = acos(-1.0);
     int x = 135;
     vector<int> list = {1, 5, 82, 5, 7};
-
+    DB(list);
 }
