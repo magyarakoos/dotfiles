@@ -1,24 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function template for printing non-iterable types
-template<typename T>
-typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
-    cerr << "[ " << arg_name << " : ";
-    cerr << arg;
-    cerr << " ]" << endl;
-}
-
-// Function template for printing iterable types
-template<typename T>
-typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
-    cerr << "[ " << arg_name << " : ";
-    for (const auto& item : arg) {
-        cerr << "   [ " << item << " ]\n";
-    }
-    cerr << " ]" << endl;
-}
-
 // Helper struct to detect iterable types at compile time
 template<typename T>
 struct is_iterable {
@@ -30,6 +12,24 @@ private:
 public:
     static constexpr bool value = decltype(test<T>(nullptr))::value;
 };
+
+// Function template for printing non-iterable types
+template<typename T>
+typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
+    cerr << "[ " << arg_name << " : ";
+    cerr << arg;
+    cerr << " ]" << endl;
+}
+
+// Function template for printing iterable types
+template<typename T>
+typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
+    cerr << "[ " << arg_name << " :\n";
+    for (const auto& item : arg) {
+        cerr << "   [ " << item << " ]\n";
+    }
+    cerr << " ]" << endl;
+}
 
 // Debug macro
 #define DEBUG(...) debug(__VA_ARGS__, #__VA_ARGS__)
