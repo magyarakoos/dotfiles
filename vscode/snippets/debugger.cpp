@@ -27,18 +27,12 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 
 #define DEBUG(x) debug(x, #x)
 
-#define DB(...) do { \
-    string args = #__VA_ARGS__; \
-    std::vector<std::string> result; \
-    size_t startPos = 0; \
-    size_t commaPos; \
-    while ((commaPos = args.find(", ", startPos)) != std::string::npos) { \
-        result.push_back(args.substr(startPos, commaPos - startPos)); \
-        startPos = commaPos + 2; \
-    } \
-    result.push_back(args.substr(startPos)); \
-    // now, call DEBUG with each arg and it's respective name stored in result
-} while (0) \
+#define DB(...) \
+do { \
+    auto t = std::make_tuple(__VA_ARGS__); \
+    std::apply( {((DEBUG(args)), ...);}, t); \
+} while(0)
+
 
 int main() {
     float PI = acos(-1.0);
