@@ -9,7 +9,11 @@ void debug(T arg, string arg_name) {
             cerr << "   [ " << item << " ]\n";
         }
     } catch {
-        cerr << arg;
+        try {
+            cerr << arg;
+        } catch {
+            cerr << "Could not print out value `" << arg_name << "`.\n";
+        }
     }
     cerr << " ]" << endl;
 }
