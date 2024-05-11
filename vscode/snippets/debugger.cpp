@@ -29,6 +29,15 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 
 #define DB(...) do { \
     string args = #__VA_ARGS__; \
+    std::vector<std::string> result; \
+    size_t startPos = 0; \
+    size_t commaPos; \
+    while ((commaPos = args.find(", ", startPos)) != std::string::npos) { \
+        result.push_back(args.substr(startPos, commaPos - startPos)); \
+        startPos = commaPos + 2; \
+    } \
+    result.push_back(args.substr(startPos)); \
+    result; \
 } while (0) \
 
 int main() {
