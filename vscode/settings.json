@@ -1,6 +1,5 @@
 {
     //"editor.fontFamily": "/usr/share/fonts/CaskaydiaCoveNerdFontMono-Regular.ttf",
-    
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "One Dark Pro",
