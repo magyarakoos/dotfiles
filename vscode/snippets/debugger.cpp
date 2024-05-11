@@ -6,7 +6,7 @@ class is_iterable {
     template<typename U> static auto test(U* p) -> decltype(begin(*p), end(*p), true_type{});
     template<typename> static auto test(...) -> false_type;
 public:
-    static constexpr bool value = decltype(test<T>(nullptr))::value;
+    static bool value = decltype(test<T>(nullptr))::value;
 };
 
 template<typename T>
@@ -33,7 +33,6 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 #define DB5(x, ...) DEBUG(x), DB4(__VA_ARGS__)
 #define GET_MACRO(_1, _2, _3, _4, _5, NAME, ...) NAME
 #define DB(...) GET_MACRO(__VA_ARGS__, DB5, DB4, DB3, DB2, DB1)(__VA_ARGS__)
-
 int main() {
     float PI = acos(-1.0);
     int x = 135;
