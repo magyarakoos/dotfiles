@@ -3,12 +3,9 @@ using namespace std;
 
 // Helper struct to detect iterable types at compile time
 template<typename T>
-struct is_iterable {
-private:
-    template<typename U>
-    static auto test(U* p) -> decltype(begin(*p), end(*p), true_type{});
-    // template<typename>
-    // static auto test(...) -> false_type;
+class is_iterable {
+    template<typename U> static auto test(U* p) -> decltype(begin(*p), end(*p), true_type{});
+    template<typename> static auto test(...) -> false_type;
 public:
     static constexpr bool value = decltype(test<T>(nullptr))::value;
 };
