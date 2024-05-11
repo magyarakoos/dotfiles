@@ -31,5 +31,6 @@
             "silent": false
           }
         ]
-      }
+      },
+      "C_Cpp.inlayHints.parameterNames.enabled": true
 }
