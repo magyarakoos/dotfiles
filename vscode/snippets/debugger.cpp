@@ -27,9 +27,10 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 
 #define DEBUG(x) debug(x, #x)
 
+// Helper function for DB macro
 template<typename... Args>
 void debug_args(Args&&... args) {
-    (DEBUG(std::forward<Args>(args)), ...);
+    ((void)DEBUG(std::forward<Args>(args)), ...);
 }
 
 
