@@ -27,15 +27,15 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 
 #define DEBUG(x) debug(x, #x)
 
-#define DB(...) \
-    do { \
-        int dummy[] = {0, ((void)DEBUG(__VA_ARGS__), 0)...}; \
-        (void)dummy; \
-    } while(0)
+template<typename... Args>
+void debug_args(Args&&... args) {
+    (DEBUG(std::forward<Args>(args)), ...);
+}
+
 
 int main() {
     float PI = acos(-1.0);
     int x = 135;
     vector<int> list = {1, 5, 82, 5, 7};
-    DB(PI, x, list);
+    debug_args(PI, x, list);
 }
