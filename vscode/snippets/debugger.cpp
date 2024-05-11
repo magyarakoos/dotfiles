@@ -2,9 +2,18 @@
 using namespace std;
 
 template<class T>
+struct has_begin_end {
+    template<class U>
+    static auto test(int) -> decltype(std::begin(std::declval<U>()) == std::end(std::declval<U>()), std::true_type());
+    template<class U>
+    static std::false_type test(...);
+    static constexpr bool value = std::is_same<decltype(test<T>(0)), std::true_type>::value;
+};
+
+template<class T>
 void debug(T arg, string arg_name) {
     cerr << "[ " << arg_name << " : ";
-    if (decltype(begin(declval<T>()), end(declval<T>()), true)) {
+    if (has_begin_end<T>::value) {
         for (auto item : arg) {
             cerr << "   [ " << item << " ]\n";
         }
