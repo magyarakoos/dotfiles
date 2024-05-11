@@ -6,7 +6,7 @@ class is_iterable {
     template<typename U> static auto test(U* p) -> decltype(begin(*p), end(*p), true_type{});
     template<typename> static auto test(...) -> false_type;
 public:
-    static bool value = decltype(test<T>(nullptr))::value;
+    static constexpr bool value = decltype(test<T>(nullptr))::value;
 };
 
 template<typename T>
