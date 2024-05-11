@@ -37,7 +37,7 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
         startPos = commaPos + 2; \
     } \
     result.push_back(args.substr(startPos)); \
-    result; \
+    // now, call DEBUG with each arg and it's respective name stored in result
 } while (0) \
 
 int main() {
