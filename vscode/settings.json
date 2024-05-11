@@ -31,5 +31,6 @@
             "silent": false
           }
         ]
-      }
+      },
+      "terminal.integrated.fontFamily": "monospace"
 }
