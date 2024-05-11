@@ -5,7 +5,7 @@ template<class T>
 void debug(T arg, string arg_name) {
     cerr << "[ " << arg_name << " : ";
     if (decltype(begin(declval<T>()), end(declval<T>()), true)) {
-        for (const auto& item : arg) {
+        for (auto item : arg) {
             cerr << "   [ " << item << " ]\n";
         }
     } else {
