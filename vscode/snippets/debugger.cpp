@@ -28,7 +28,7 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
 #define DEBUG(x) debug(x, #x)
 
 #define DB(...) do { \
-    string args = "__VA_ARGS__"; \
+    string args = #__VA_ARGS__; \
 } while (0) \
 
 int main() {
