@@ -24,11 +24,11 @@ typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
 // Function template for printing iterable types
 template<typename T>
 typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
-    cerr << "[ " << arg_name << " :\n";
+    cerr << "[ " << arg_name << " : ";
     for (const auto& item : arg) {
-        cerr << "   [ " << item << " ]\n";
+        cerr << item << " ";
     }
-    cerr << " ]" << endl;
+    cerr << "]" << endl;
 }
 
 // Debug macro
