@@ -10,6 +10,7 @@ class is_iterable {
 public:
     static constexpr bool value = decltype(test<T>(nullptr))::value;
 };
+
 template<typename T>
 typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
     #ifndef LOCAL
@@ -19,6 +20,7 @@ typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
     cerr << fixed << setprecision(15) << arg;
     cerr << " ]" << endl;
 }
+
 template<typename T>
 typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
     #ifndef LOCAL
@@ -30,6 +32,7 @@ typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
     }
     cerr << "]" << endl;
 }
+
 #define DEBUG(x) debug(x, #x)
 #define DB1(x) DEBUG(x)
 #define DB2(x, ...) DEBUG(x), DB1(__VA_ARGS__)
