@@ -15,7 +15,7 @@ void debug(T arg, string arg_name) {
 }
 
 template<class T>
-void debug(T arg, string labels[]) {
+void debug(vector<string> labels, vector<T> args) {
     #ifndef LOCAL
         return;
     #endif
@@ -30,7 +30,7 @@ void debug(T arg, string labels[]) {
 #define DEBUG(...) \
 do { \
     string labels[] = {#__VA_ARGS__}; \
-    debug(labels, __VA_ARGS__); \
+    debug(labels, {__VA_ARGS__}); \
 } while(0)
 
 
