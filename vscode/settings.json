@@ -36,5 +36,8 @@
       "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
       "C_Cpp.inlayHints.referenceOperator.enabled": true,
       "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
-      "C_Cpp.intelliSenseUpdateDelay": 500
+      "C_Cpp.intelliSenseUpdateDelay": 500,
+      "C_Cpp.default.compilerArgs": [
+        "-std=c++20"
+      ]
 }
