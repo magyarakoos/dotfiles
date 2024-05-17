@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+#ifdef LOCAL
+#else
+#endif
 using namespace std;
 using ll = long long;
 
