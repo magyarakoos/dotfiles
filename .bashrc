@@ -37,8 +37,11 @@ alias syrep='sync-repos.sh'
 PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'; PS1='\[\e[38;5;39m\]\W\[\e[38;5;44;1m\] λ \[\e[0;38;5;49m\]${PS1_CMD1}\n\[\e[95;1m\]❱ \[\e[0m\]\[\e[38;5;254m\]'
 # -------------- #
 # --- launch logic --- #
+
+export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export PATH=$PATH:~/.bash/
+
 bind -s 'set completion-ignore-case on '
 autosync-repos.sh >/dev/null 2>&1 &
 disown
