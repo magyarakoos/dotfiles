@@ -18,7 +18,7 @@ typename enable_if<!is_iterable<T>::value>::type debug(T arg, string arg_name) {
 
 template<typename T>
 typename enable_if<is_iterable<T>::value>::type debug(T arg, string arg_name) {
-    cerr << " " << arg_name << " : ";
+    cerr << "[ " << arg_name << " : ";
     for (const auto& item : arg) {
         cerr << fixed << setprecision(15) << item << " ";
     }
