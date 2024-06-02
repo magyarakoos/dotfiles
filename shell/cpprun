@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ -n "$1" ]; then
+  path="$1"
+else
+  path="main.cpp"
+fi
+
+if [ -n "$2" ]; then
+  exe_name="$2"
+else
+  exe_name="main"
+fi
+
+g++ -o $exe_name \
+    -std=c++20 \
+    -Wall \
+    -fsanitize=address,undefined \
+    -O3 \
+    -DLOCAL \
+    -I$HOME/cpp-include/
+    $path
+
+shift 2
+./$exe_name $@
+rm $exe_name
