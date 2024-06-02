@@ -18,7 +18,7 @@ g++ -o $exe_name \
     -fsanitize=address,undefined \
     -O3 \
     -DLOCAL \
-    -I$HOME/cpp-include/
+    -I$HOME/cpp-include/ \
     $path
 
 shift 2
