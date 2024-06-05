@@ -7,5 +7,5 @@ cd ~/repos/
 for directory in */; do
     cd ~/repos/"$directory"
     echo "Current working directory: $directory"
-    git-sync.sh
+    git-sync
 done

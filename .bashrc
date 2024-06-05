@@ -25,10 +25,10 @@ alias cppmain='( [ -e main.cpp ] || { cp ~/.config/Code/User/snippets/template.c
 alias cppcomp='g++ -o main -std=c++20 -Wall -fsanitize=address,undefined -O3 -DLOCAL -I/home/akos/cpp-include/ main.cpp'
 alias cpprun='cppcomp && ./main'
 
-alias clone='. git-clone.sh'
-alias cred='git-cred.sh'
-alias sy='git-sync.sh'
-alias syrep='sync-repos.sh'
+alias clone='. git-clone'
+alias cred='git-cred'
+alias sy='git-sync'
+alias syrep='sync-repos'
 # --------------- #
 
 # --- prompt --- #
@@ -43,6 +43,6 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export PATH=$PATH:~/.bash/
 
 bind -s 'set completion-ignore-case on '
-autosync-repos.sh >/dev/null 2>&1 &
+autosync-repos >/dev/null 2>&1 &
 disown
 # -------------------- #
