@@ -12,9 +12,8 @@ for (( i=0; i<task_count; i++ )); do
     mkdir $task_id
     cd $task_id
     cp $HOME/.config/Code/User/snippets/contest-template.cpp _main.cpp
+    touch input
     cd ..
 done
-
-touch input
 
 code .
