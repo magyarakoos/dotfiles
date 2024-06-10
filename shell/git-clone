@@ -16,4 +16,5 @@ git clone $repo_url
 cd "$repo_name"
 
 # Assuming git-cred.sh is a script related to handling credentials, execute it
-git-cred.sh $repo_name
+git-cred $repo_name
+
