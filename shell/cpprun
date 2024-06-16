@@ -12,11 +12,12 @@ else
   exe_name="main"
 fi
 
-g++ -o $exe_name \
+clang++ -o $exe_name \
     -std=c++20 \
     -Wall \
+    -Wno-unused \
     -fsanitize=address,undefined \
-    -O3 \
+    -O0 \
     -DLOCAL \
     -I$HOME/cpp-include/ \
     $path
