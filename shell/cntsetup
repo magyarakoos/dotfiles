@@ -16,4 +16,4 @@ for (( i=0; i<task_count; i++ )); do
     cd ..
 done
 
-code .
+vi .
