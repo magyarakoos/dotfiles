@@ -22,11 +22,7 @@ alias tree='tree -a -I .git'
 alias pq='pacman -Q | fzf'
 
 vi() {
-  # Try to use sudoedit
-  if ! sudoedit "$@"; then
-    # If sudoedit fails, use nvim instead
-    nvim "$@"
-  fi
+    if [ -w $1 ]; then nvim $1; else sudoedit $1; fi
 }
 
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
