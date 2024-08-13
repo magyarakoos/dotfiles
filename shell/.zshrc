@@ -20,13 +20,14 @@ alias l='ls -A --color=auto'
 alias c='printf "\033[2J\033[3J\033[1;1H"' # clears the scrollback buffer as well as the screen
 alias tree='tree -a -I .git'
 alias pq='pacman -Q | fzf'
-alias vi='function _vi() { \
-    if [ -w "$1" ]; then \
-        nvim "$1"; \
-    else \
-        sudoedit "$1"; \
-    fi \
-}; _vi'
+
+vi() {
+  # Try to use sudoedit
+  if ! sudoedit "$@"; then
+    # If sudoedit fails, use nvim instead
+    nvim "$@"
+  fi
+}
 
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#6c30f5
