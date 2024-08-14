@@ -480,6 +480,7 @@ require('lazy').setup({
             local servers = {
                 -- clangd = {},
                 -- gopls = {},
+                texlab = {},
                 pyright = {},
                 julials = {},
                 -- rust_analyzer = {},
