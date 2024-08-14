@@ -886,23 +886,25 @@ function Run_script_macro()
     -- Save the current file
     vim.cmd 'write'
 
+    local input = vim.fn.expand '%:p:h' .. '/input'
+
     -- Check if 'input' file exists, if not, create it and open it in a new buffer
-    if vim.fn.filereadable 'input' == 0 then
-        vim.cmd 'new input' -- Open a new buffer with the file 'input'
+    if vim.fn.filereadable(input) == 0 then
+        vim.cmd('new ' .. input) -- Open a new buffer with the file 'input'
         vim.cmd 'resize 15' -- Resize the buffer window to 15 lines
 
-        vim.cmd 'echo "There was no input file, create one"'
+        vim.cmd 'echo "No input file, create one"'
         return
     end
 
     -- Define the command to run based on the file extension
     local run_cmd = ''
     if file_ext == 'cpp' then
-        run_cmd = 'cpprun ' .. current_file .. ' main < input'
+        run_cmd = 'cpprun ' .. current_file .. ' main < ' .. input
     elseif file_ext == 'jl' then
-        run_cmd = 'julia ' .. current_file .. ' < input'
+        run_cmd = 'julia ' .. current_file .. ' < ' .. input
     elseif file_ext == 'py' then
-        run_cmd = 'python ' .. current_file .. ' < input'
+        run_cmd = 'python ' .. current_file .. ' < ' .. input
     end
 
     -- Execute the command and capture the output
@@ -929,6 +931,8 @@ end
 
 -- Set up the key mapping for the macro
 vim.api.nvim_set_keymap('n', '<Leader>r', ':lua Run_script_macro()<CR>', { noremap = true, silent = true })
+-- -- Quick way to remove the input file
+-- vim.api.nvim_set_keymap('n', '<Leader>e', ':silent !rm input<CR>', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
