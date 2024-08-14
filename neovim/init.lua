@@ -558,7 +558,7 @@ require('lazy').setup({
         lazy = false, -- we don't want to lazy load VimTeX
         init = function()
             -- VimTeX configuration goes here, e.g.
-            vim.g.vimtex_view_method = 'okular'
+            vim.g.vimtex_view_method = 'zathura'
             vim.g.vimtex_compiler_method = 'latexrun'
         end,
     },
