@@ -41,8 +41,8 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
 export GPG_TTY=$TTY
 export EDITOR=nvim
 export PATH=$PATH:~/.bash/:/usr/local/texlive/2024/bin/x86_64-linux
-export MANPATH="/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 
 # Source local files
 z4h source ~/.env.zsh
