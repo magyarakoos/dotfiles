@@ -20,6 +20,7 @@ alias l='ls -A --color=auto'
 alias c='printf "\033[2J\033[3J\033[1;1H"' # clears the scrollback buffer as well as the screen
 alias tree='tree -a -I .git'
 alias pq='pacman -Q | fzf'
+alias vi='nvim'
 
 # doesn't work, fml
 # vi() {
