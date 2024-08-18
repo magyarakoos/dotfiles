@@ -21,9 +21,10 @@ alias c='printf "\033[2J\033[3J\033[1;1H"' # clears the scrollback buffer as wel
 alias tree='tree -a -I .git'
 alias pq='pacman -Q | fzf'
 
-vi() {
-    if [ -w $1 ]; then nvim $1; else sudoedit $1; fi
-}
+# doesn't work, fml
+# vi() {
+#     if [ -w $1 ]; then nvim $1; else sudoedit $1; fi
+# }
 
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#6c30f5
