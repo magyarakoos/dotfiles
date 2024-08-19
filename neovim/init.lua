@@ -912,18 +912,6 @@ function Run_script_macro()
     -- Execute the command and capture the output
     local output = vim.fn.systemlist(run_cmd)
 
-    -- local output_lines = #output
-    --
-    -- -- If output is larger than 1000 lines, truncate and add a message
-    -- if output_lines > 1000 then
-    --     local truncated_output = {}
-    --     for i = 1, 1000 do
-    --         table.insert(truncated_output, output[i])
-    --     end
-    --     table.insert(truncated_output, "OUTPUT REDACTED -- " .. tostring(output_lines - 1000) .. " LINES AT THE END")
-    --     output = truncated_output
-    -- end
-
     -- Open a new window and display the output
     vim.cmd 'new'
     vim.cmd 'setlocal nobuflisted'
