@@ -344,6 +344,9 @@ require('lazy').setup({
             },
         },
     },
+    {
+        'evanleck/vim-svelte',
+    },
     { -- Git integration
         'tpope/vim-fugitive',
     },
