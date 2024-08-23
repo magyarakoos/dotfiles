@@ -345,6 +345,9 @@ require('lazy').setup({
         },
     },
     {
+        'leafOfTree/vim-svelte-plugin',
+    },
+    {
         'evanleck/vim-svelte',
     },
     { -- Git integration
