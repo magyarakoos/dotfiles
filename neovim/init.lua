@@ -345,7 +345,7 @@ require('lazy').setup({
         },
     },
     {
-        'luckasRanarison/tailwind-tools',
+        'luckasRanarison/tailwind-tools.nvim',
     },
     {
         'aca/emmet-ls',
