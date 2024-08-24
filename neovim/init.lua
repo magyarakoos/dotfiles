@@ -496,6 +496,7 @@ require('lazy').setup({
             local servers = {
                 -- clangd = {},
                 -- gopls = {},
+                svelte = {},
                 html = {},
                 texlab = {},
                 pyright = {},
