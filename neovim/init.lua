@@ -352,6 +352,7 @@ require('lazy').setup({
     },
     {
         'aca/emmet-ls',
+        filetypes = { 'html', 'css', 'sass', 'scss' },
     },
     {
         'leafOfTree/vim-svelte-plugin',
