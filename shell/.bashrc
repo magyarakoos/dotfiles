@@ -17,6 +17,7 @@ alias l='ls -A --color=auto'
 alias rl='c && bash'
 alias f='find . | fzf'
 alias pq='pacman -Q | fzf'
+alias public-ip='curl ifconfig.co/ip'
 
 alias upd='sudo pacman -Sy'
 alias update='sudo pacman -Syu && yay -Syu'
