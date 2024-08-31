@@ -904,6 +904,8 @@ function Reset_input_macro()
     -- Path to the input file
     local input = vim.fn.expand("%:p:h") .. "/input"
     vim.fn.writefile({}, input)
+    vim.cmd("split " .. input)
+    vim.cmd("resize 15")
 end
 
 function Run_script_macro()
@@ -953,8 +955,6 @@ end
 
 -- Set up the key mapping for the macro
 vim.api.nvim_set_keymap("n", "<Leader>r", ":lua Run_script_macro()<CR>", { noremap = true, silent = true })
--- -- Quick way to remove the input file
--- vim.api.nvim_set_keymap('n', '<Leader>e', ':silent !rm input<CR>', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
