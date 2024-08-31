@@ -1,0 +1,18 @@
+---
+# A solid foundation for formatting
+BasedOnStyle: LLVM
+# I love my 4-space indentation
+IndentWidth: 4
+
+# Force pointers to the type for C++
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# Prevents force-folding of short expressions
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortBlocksOnASingleLine: true
+...
+
