@@ -903,13 +903,7 @@ vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +2<CR>", { noremap =
 function Reset_input_macro()
     -- Path to the input file
     local input = vim.fn.expand("%:p:h") .. "/input"
-
-    if vim.fn.filereadable(input) then
-        -- empty the contents of the file
-    end
-
-    -- open the empty input file (create it if it does not exist)
-    -- open it in a new buffer, resize it to 15
+    vim.fn.writefile({}, input)
 end
 
 function Run_script_macro()
