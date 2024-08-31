@@ -1,0 +1,6 @@
+# These are my cpprun script's flags, may be stupid but works for what I do
+CompileFlags:
+    Add: [
+        -DLOCAL,
+        -I/home/akos/cpp-include/
+    ]
