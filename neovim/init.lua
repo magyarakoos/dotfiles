@@ -581,24 +581,9 @@ require('lazy').setup({
         'lervag/vimtex',
         lazy = false, -- we don't want to lazy load VimTeX
         init = function()
-            -- VimTeX configuration goes here
+            -- VimTeX configuration goes here, e.g.
             vim.g.vimtex_view_method = 'zathura'
             vim.g.vimtex_compiler_method = 'latexrun'
-
-            -- Configure latexrun to compile silently
-            vim.g.vimtex_compiler_latexrun = {
-                ['build_dir'] = '',
-                ['callback'] = 0,
-                ['continuous'] = 1,
-                ['latexmk'] = {
-                    ['build'] = '',
-                    ['build_options'] = '',
-                    ['callback'] = 0,
-                },
-            }
-
-            -- Disable quickfix window
-            vim.g.vimtex_quickfix_mode = 0
         end,
     },
     { -- Autoformat
