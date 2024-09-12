@@ -21,6 +21,7 @@ alias c='printf "\033[2J\033[3J\033[1;1H"' # clears the scrollback buffer as wel
 alias tree='tree -a -I .git'
 alias pq='pacman -Q | fzf'
 alias vi='nvim'
+alias templ='cp ~/.config/nvim/templates/template.cpp main.cpp && vi main.cpp'
 
 # doesn't work, fml
 # vi() {
