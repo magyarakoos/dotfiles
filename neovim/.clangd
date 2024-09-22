@@ -2,5 +2,6 @@
 CompileFlags:
     Add: [
         -DLOCAL,
-        -I/home/akos/cpp-include/
+        -I/home/akos/cpp-include/,
+        -std=c++20
     ]
