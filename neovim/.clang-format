@@ -8,6 +8,7 @@ IndentWidth: 4
 DerivePointerAlignment: false
 PointerAlignment: Left
 
+# Highly opinionated line-break logic
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLoopsOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
