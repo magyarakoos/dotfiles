@@ -8,13 +8,13 @@ IndentWidth: 4
 DerivePointerAlignment: false
 PointerAlignment: Left
 
-# Prevents force-folding of short expressions
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLoopsOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortBlocksOnASingleLine: true
+AlwaysBreakTemplateDeclarations: Yes
 
-ColumnLimit: 50
+ColumnLimit: 70
 ...
 
