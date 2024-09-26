@@ -14,5 +14,8 @@ AllowShortLoopsOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortBlocksOnASingleLine: true
+
+ColumnLimit: 100
+BreakBeforeBraces: Allman
 ...
 
