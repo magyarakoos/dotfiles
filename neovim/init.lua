@@ -504,7 +504,7 @@ require('lazy').setup({
                 texlab = {},
                 pyright = {},
                 julials = {},
-                tsserver = {},
+                -- tsserver = {},
                 tailwindcss = {},
                 -- rust_analyzer = {},
                 -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
