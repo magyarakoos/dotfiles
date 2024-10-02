@@ -919,7 +919,8 @@ function Run_script_macro()
     end
 
     if file_ext == 'tex' then
-        vim.cmd '<Leader>ll'
+        local keys = vim.api.nvim_replace_termcodes('<Leader>ll', true, false, true)
+        vim.api.nvim_feedkeys(keys, 'n', true)
         return
     end
 
