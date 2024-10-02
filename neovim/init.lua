@@ -913,7 +913,7 @@ function Run_script_macro()
     local file_ext = vim.fn.expand '%:e'
 
     -- Check if the file is .cpp, .jl, or .py
-    if file_ext ~= 'cpp' and file_ext ~= 'jl' and file_ext ~= 'py' then
+    if file_ext ~= 'cpp' and file_ext ~= 'jl' and file_ext ~= 'py' and file_ext ~= 'tex' then
         vim.cmd 'echo "This file format is not supported"'
         return
     end
@@ -940,6 +940,8 @@ function Run_script_macro()
         run_cmd = 'julia ' .. current_file .. ' < ' .. input
     elseif file_ext == 'py' then
         run_cmd = 'python ' .. current_file .. ' < ' .. input
+    elseif file_ext == 'tex' then
+        vim.cmd '<Leader>ll'
     end
 
     -- Execute the command and capture the output
