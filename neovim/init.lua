@@ -918,6 +918,11 @@ function Run_script_macro()
         return
     end
 
+    if file_ext == 'tex' then
+        vim.cmd '<Leader>ll'
+        return
+    end
+
     -- Save the current file
     vim.cmd 'write'
 
@@ -940,8 +945,6 @@ function Run_script_macro()
         run_cmd = 'julia ' .. current_file .. ' < ' .. input
     elseif file_ext == 'py' then
         run_cmd = 'python ' .. current_file .. ' < ' .. input
-    elseif file_ext == 'tex' then
-        vim.cmd '<Leader>ll'
     end
 
     -- Execute the command and capture the output
