@@ -919,8 +919,7 @@ function Run_script_macro()
     end
 
     if file_ext == 'tex' then
-        local keys = vim.api.nvim_replace_termcodes('<Leader>ll', true, false, true)
-        vim.api.nvim_feedkeys(keys, 'n', true)
+        vim.cmd 'normal @l'
         return
     end
 
@@ -963,4 +962,3 @@ vim.api.nvim_set_keymap('n', '<Leader>b', ':lua Run_script_macro()<CR>', { norem
 vim.api.nvim_set_keymap('n', '<Leader>eb', ':lua Reset_input_macro()<CR>', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
