@@ -45,6 +45,7 @@ export GPG_TTY=$TTY
 export EDITOR=nvim
 export PATH="$PATH:$HOME/.bash/"
 export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+export PATH="$PATH:/home/akos/.cargo/bin"
 export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 
