@@ -46,6 +46,7 @@ PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export PATH=$PATH:~/.bash/
+export PATH=$PATH:/home/akos/.cargo/bin
 export EDITOR=nvim
 
 bind -s 'set completion-ignore-case on '
