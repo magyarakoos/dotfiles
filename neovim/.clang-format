@@ -16,6 +16,6 @@ AllowShortFunctionsOnASingleLine: Inline
 AllowShortBlocksOnASingleLine: true
 AlwaysBreakTemplateDeclarations: Yes
 
-ColumnLimit: 70
+ColumnLimit: 50
 ...
 
