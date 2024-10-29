@@ -22,6 +22,8 @@ alias public-ip='curl ifconfig.co/ip'
 alias upd='sudo pacman -Sy'
 alias update='sudo pacman -Syu && yay -Syu'
 
+alias templ='( [ -e main.cpp ] || { cp ~/.config/nvim/templates/template.cpp main.cpp && vi main.cpp; } )'
+
 alias clone='. git-clone'
 alias cred='git-cred'
 alias sy='git-sync'
