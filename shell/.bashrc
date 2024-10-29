@@ -22,10 +22,6 @@ alias public-ip='curl ifconfig.co/ip'
 alias upd='sudo pacman -Sy'
 alias update='sudo pacman -Syu && yay -Syu'
 
-alias cppmain='( [ -e main.cpp ] || { cp ~/.config/Code/User/snippets/template.cpp main.cpp && code main.cpp; } )'
-alias cppcomp='g++ -o main -std=c++20 -Wall -fsanitize=address,undefined -O3 -DLOCAL -I/home/akos/cpp-include/ main.cpp'
-alias cpprun='cppcomp && ./main'
-
 alias clone='. git-clone'
 alias cred='git-cred'
 alias sy='git-sync'
