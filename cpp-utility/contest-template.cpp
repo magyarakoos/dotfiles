@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-using i32 = int;
-using i64 = long long;
+using i32 = int32_t;
+using i64 = int64_t;
 
 #define cases 0
 void solve() {}
