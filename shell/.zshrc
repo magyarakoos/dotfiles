@@ -24,6 +24,7 @@ alias vi='nvim'
 alias templ='cp ~/.config/nvim/templates/template.cpp main.cpp && vi main.cpp'
 alias icat='kitten icat'
 alias clip='xclip -selection clipboard'
+alias trm='trash-put' # move item into the trash
 
 # doesn't work, fml
 # vi() {
