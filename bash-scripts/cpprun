@@ -12,7 +12,7 @@ else
   exe_name="main"
 fi
 
-ccache clang++ -o $exe_name \
+clang++ -o $exe_name \
     -std=c++20 \
     -Wall \
     -Wno-unused \
