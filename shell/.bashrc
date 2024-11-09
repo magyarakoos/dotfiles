@@ -46,7 +46,7 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export PATH=$PATH:~/.bash/
 export PATH=$PATH:/home/akos/.cargo/bin
 export EDITOR=nvim
-export PICO_SDK_PATH=~/.pico-sdk/
+export PICO_SDK_PATH=~/.pico-sdk
 
 bind -s 'set completion-ignore-case on '
 autosync-repos >/dev/null 2>&1 &
