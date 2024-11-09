@@ -369,9 +369,6 @@ require("lazy").setup({
     {
         "tpope/vim-surround",
     },
-    {
-        "Civitasv/cmake-tools.nvim",
-    },
     { -- LSP Configuration & Plugins
         "neovim/nvim-lspconfig",
         dependencies = {
