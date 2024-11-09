@@ -504,7 +504,6 @@ require("lazy").setup({
             local servers = {
                 clangd = {
                     cmd = { "clangd", "--compile-commands-dir=build" },
-                    root_dir = require("lspconfig").util.root_pattern("CMakeLists.txt", ".git"), -- Look for CMakeLists.txt
                 },
                 -- gopls = {},
                 svelte = {},
