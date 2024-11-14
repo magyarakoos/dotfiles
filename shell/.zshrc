@@ -51,6 +51,7 @@ export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
 export PATH="$PATH:/home/akos/.cargo/bin"
 export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
+export PICO_SDK_PATH="$HOME/.pico-sdk"
 
 # Source local files
 z4h source ~/.env.zsh
