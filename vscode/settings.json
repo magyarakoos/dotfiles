@@ -43,5 +43,9 @@
         "-DLOCAL",
         "-I/home/akos/cpp-include/"
       ],
-      "cmake.showOptionsMovedNotification": false
+      "cmake.showOptionsMovedNotification": false,
+      "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+      ]
 }
