@@ -955,6 +955,12 @@ function Run_script_macro()
     -- Execute the command and capture the output
     local output = vim.fn.systemlist(run_cmd)
 
+    -- Check for execution errors
+    if vim.v.shell_error ~= 0 then
+        vim.cmd("echo 'Error while running the script'")
+        return
+    end
+
     -- Open a new window and display the output
     vim.cmd("new")
     vim.cmd("setlocal nobuflisted")
