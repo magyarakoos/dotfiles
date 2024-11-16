@@ -955,13 +955,11 @@ function Run_script_macro()
     -- Execute the command and capture the output
     local output = vim.fn.systemlist(run_cmd)
 
-    print(vim.inspect(output))
-
     -- Open a new window and display the output
-    -- vim.cmd("new")
-    -- vim.cmd("setlocal nobuflisted")
-    -- vim.cmd("resize 15")
-    -- vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
+    vim.cmd("new")
+    vim.cmd("setlocal nobuflisted")
+    vim.cmd("resize 15")
+    vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
 end
 
 -- Set up the key mapping for the macro
