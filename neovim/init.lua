@@ -959,7 +959,9 @@ function Run_script_macro()
     vim.cmd("new")
     vim.cmd("setlocal nobuflisted")
     vim.cmd("resize 15")
-    vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
+    print(vim.inspect(output))
+
+    -- vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
 end
 
 -- Set up the key mapping for the macro
