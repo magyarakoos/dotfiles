@@ -1,7 +1,4 @@
 #include <bits/stdc++.h>
-#ifdef LOCAL
-#include "debug.h"
-#endif
 
 using namespace std;
 using ll = long long;
