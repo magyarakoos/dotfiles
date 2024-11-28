@@ -560,6 +560,10 @@ require('lazy').setup({
                     end,
                 },
             }
+
+            require('lspconfig')['uiua'].setup {
+                cmd = { 'uiua', 'lsp' },
+            }
         end,
     },
     { -- C# integration
