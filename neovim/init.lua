@@ -369,9 +369,6 @@ require('lazy').setup({
     {
         'tpope/vim-surround',
     },
-    {
-        'sputnick1124/uiua.vim',
-    },
     { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
         dependencies = {
