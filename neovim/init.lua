@@ -369,9 +369,6 @@ require('lazy').setup({
     {
         'tpope/vim-surround',
     },
-    {
-        'Apeiros-46B/uiua.vim',
-    },
     { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
         dependencies = {
