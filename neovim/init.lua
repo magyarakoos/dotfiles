@@ -968,6 +968,4 @@ vim.api.nvim_set_keymap("n", "<Leader>eb", ":lua Reset_input_macro()<CR>", { nor
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 
--- Setup Uiua LSP
-local lspconfig = require("lspconfig")
-lspconfig.uiua.setup({})
+require("lspconfig").uiua.setup({})
