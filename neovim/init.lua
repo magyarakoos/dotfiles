@@ -898,10 +898,6 @@ require("lazy").setup({
     },
 })
 
--- Temporary workaround - make Uiua work
-vim.cmd([[autocmd BufRead,BufNewFile *.ua setfiletype uiua]])
-lspconfig.uiua.setup({})
-
 -- Resize windows using Ctrl + Arrow keys
 vim.api.nvim_set_keymap("n", "<C-Up>", ":resize -2<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-Down>", ":resize +2<CR>", { noremap = true, silent = true })
