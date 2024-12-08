@@ -12,10 +12,11 @@ if ! [[ "$1" =~ ^[0-9]+$ ]] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
-# Run the compiler
+# Compile the source
 clang++ -o main \
     -std=c++20 \
     -O3 \
     "part$1.cpp"
 
+# Run the executable with the provided input
 time ./main < "input.$2"
