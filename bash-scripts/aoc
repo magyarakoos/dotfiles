@@ -1,3 +1,26 @@
 #!/bin/bash
 
+# Check if at least two arguments are provided
+if [[ $# -lt 2 ]]; then
+  echo "Usage: aoc <part> <input>"
+  exit 1
+fi
+
+# Assign command-line arguments
+num1=$1
+num2=$2
+
+# Validate that both arguments are numbers
+if ! [[ "$num1" =~ ^[0-9]+$ ]] || ! [[ "$num2" =~ ^[0-9]+$ ]]; then
+  echo "Error: Both arguments must be numbers."
+  exit 1
+fi
+
+# Construct the path and input variables
+path="part${num1}.cpp"
+input="input.${num2}"
+
+# Output the results
+echo "Path: $path"
+echo "Input: $input"
 
