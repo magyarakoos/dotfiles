@@ -1,4 +1,4 @@
-local path = '/home/marcospotato/.config/'
+local path = '~'
 
 local opts = {
     formatters_by_ft = {
