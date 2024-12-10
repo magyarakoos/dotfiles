@@ -1,4 +1,4 @@
-local path = '~'
+local path = '/home/akos/'
 
 local opts = {
     formatters_by_ft = {
@@ -52,7 +52,7 @@ local opts = {
 local prepend_args = {
     stylua = { '-f', path .. 'stylua/.stylua.toml' },
     prettier = { '--config', path .. 'prettier/.prettierrc' },
-    clang_format = { '-style=file:' .. path .. '.clang-format' },
+    clang_format = { '-style=file:' .. path .. 'clang/.clang-format' },
     mdformat = { '--number', '--wrap', '80' },
 }
 
