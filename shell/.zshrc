@@ -26,11 +26,6 @@ alias icat='kitten icat'
 alias clip='xclip -selection clipboard'
 alias trm='trash-put' # move item into the trash
 
-# doesn't work, fml
-# vi() {
-#     if [ -w $1 ]; then nvim $1; else sudoedit $1; fi
-# }
-
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#6c30f5
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=#8e5cff
