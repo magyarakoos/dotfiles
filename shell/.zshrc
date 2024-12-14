@@ -23,6 +23,7 @@ alias pq='pacman -Q | fzf'
 alias vi='nvim'
 alias templ='cp ~/.config/nvim/templates/template.cpp main.cpp && vi main.cpp'
 alias icat='kitten icat'
+alias cat='bat' # better cat
 alias clip='xclip -selection clipboard'
 alias trm='trash-put' # move item into the trash
 
