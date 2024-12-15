@@ -17,17 +17,16 @@ file="part$1.cpp"
 LTIME=`stat -c %Z $1`
 
 while true; do
-
-echo "watching $file for changes..."
-
-# Compile the source
-clang++ -o main \
-    -std=c++20 \
-    -O3 \
-    -I/home/akos/cpp-include/ \
-    "part$1.cpp"
-
-# Run the executable with the provided input
-time ./main < "input.$2"
+    echo "Watching $file for changes..."
+    
+    # Compile the source
+    clang++ -o main \
+        -std=c++20 \
+        -O3 \
+        -I/home/akos/cpp-include/ \
+        "part$1.cpp"
+    
+    # Run the executable with the provided input
+    time ./main < "input.$2"
 done
 
