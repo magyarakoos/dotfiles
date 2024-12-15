@@ -23,7 +23,7 @@ while true; do
     if [[ $ATIME != $LTIME ]] then
         LTIME=$ATIME
 
-        echo "Compiling source..."
+        echo -e "Compiling source...\n"
 
         clang++ -o main \
             -std=c++20 \
