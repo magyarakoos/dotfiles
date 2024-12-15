@@ -14,7 +14,7 @@ fi
 
 file="part$1.cpp"
 
-# LTIME=`stat -c %Z $1`
+LTIME=`stat -c %Z $file`
 
 while true; do
     printf '%*s' $COLUMNS | tr ' ' '-'
