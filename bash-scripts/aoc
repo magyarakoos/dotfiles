@@ -23,12 +23,14 @@ while true; do
     if [[ $ATIME != $LTIME ]] then
         LTIME=$ATIME
 
-        echo -e "\nCompiling source...\n"
+        echo -e "\nCompiling source..."
 
         clang++ -o main \
             -std=c++20 \
             -O3 \
             $file
+
+        echo -e "Running...\n"
 
         start_time_us=$(echo $EPOCHREALTIME | tr -d '.')
         ./main < $input
@@ -42,10 +44,5 @@ while true; do
         echo -n "Watching $file for changes..."
     fi
     sleep 0.1
-    
-    # # Compile the source
-    #
-    # # Run the executable with the provided input
-    # time ./main < "input.$2"
 done
 
