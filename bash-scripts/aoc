@@ -30,6 +30,11 @@ while true; do
             -O3 \
             $file
 
+        if [[ $? != 0 ]] then
+            echo -e "Compilation failed.\n"
+            continue
+        fi
+        
         echo -e "Running...\n"
 
         start_time_us=$(echo $EPOCHREALTIME | tr -d '.')
@@ -43,6 +48,6 @@ while true; do
         echo -e "| Took \e[31m$delta_ms\e[0m ms"
         printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
     fi
-    sleep 0.1
+    sleep 1
 done
 
