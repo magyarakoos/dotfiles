@@ -19,11 +19,10 @@ LTIME=`stat -c %Z $file`
 while true; do
     ATIME=`stat -c %Z $file`
 
-    if ATIME != LTIME; then
-        command ...
+    if ATIME -ne LTIME; then
+        printf '%*s' $COLUMNS | tr ' ' '-'
+        echo "Watching $file for changes..."
     fi
-    printf '%*s' $COLUMNS | tr ' ' '-'
-    echo "Watching $file for changes..."
     sleep 1
     
     # # Compile the source
