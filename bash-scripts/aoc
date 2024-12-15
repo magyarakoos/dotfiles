@@ -34,7 +34,7 @@ while true; do
         ./main < $input
         end_time_us=$EPOCHREALTIME
 
-        delta_ms=$( ($end_time_us-$start_time_us)/1000 )
+        delta_ms=$(( (end_time_us - start_time_us) / 1000 ))
 
         echo
         echo $delta_ms
