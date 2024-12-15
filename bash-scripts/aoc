@@ -17,6 +17,11 @@ file="part$1.cpp"
 LTIME=`stat -c %Z $file`
 
 while true; do
+    ATIME=`stat -c %Z $file`
+
+    if ATIME != LTIME; then
+        command ...
+    fi
     printf '%*s' $COLUMNS | tr ' ' '-'
     echo "Watching $file for changes..."
     sleep 1
