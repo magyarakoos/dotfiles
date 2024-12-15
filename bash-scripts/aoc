@@ -37,7 +37,7 @@ while true; do
         delta_ms=$(( (end_time_us - start_time_us) / 1000 ))
 
         echo
-        printf '┌%*s\n' $(($COLUMNS / 5)) | tr ' ' '-'
+        printf '┌%*s\n' 15 | tr ' ' '-'
         echo "| Took $delta_ms ms"
         printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
         echo "Watching $file for changes..."
