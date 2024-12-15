@@ -23,13 +23,15 @@ while true; do
     if [[ $ATIME != $LTIME ]] then
         LTIME=$ATIME
 
+        echo "Compiling source..."
+
         clang++ -o main \
             -std=c++20 \
             -O3 \
             $file
 
-        start_time = ${echo $EPOCHREALTIME}
-        echo start_time
+        start_time=$EPOCHREALTIME
+        echo $start_time
 
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
