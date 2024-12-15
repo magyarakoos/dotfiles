@@ -17,8 +17,8 @@ file="part$1.cpp"
 # LTIME=`stat -c %Z $1`
 
 while true; do
-    echo "Watching $file for changes..."
     printf '%*s' $COLUMNS | tr ' ' '-'
+    echo "Watching $file for changes..."
     sleep 1
     
     # # Compile the source
