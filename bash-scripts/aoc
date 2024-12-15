@@ -13,6 +13,7 @@ if ! [[ "$1" =~ ^[0-9]+$ ]] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
 fi
 
 file="part$1.cpp"
+input="input.$2"
 
 LTIME=`stat -c %Z $file`
 
@@ -20,7 +21,10 @@ while true; do
     ATIME=`stat -c %Z $file`
 
     if [[ $ATIME != $LTIME ]] then
-        $LTIME = $ATIME
+        LTIME=$ATIME
+
+
+
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
     fi
