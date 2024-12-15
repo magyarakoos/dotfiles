@@ -41,7 +41,6 @@ while true; do
         printf '\n\n┌%*s\n' 15 | tr ' ' '-'
         echo -e "| Took \e[31m$delta_ms\e[0m ms"
         printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
-        echo -n "Watching $file for changes..."
     fi
     sleep 0.1
 done
