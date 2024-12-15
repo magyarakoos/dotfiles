@@ -6,12 +6,6 @@ if [[ $# -lt 2 ]]; then
   exit 1
 fi
 
-# Validate that both arguments are numbers
-if ! [[ "$1" =~ ^[0-9]+$ ]] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
-  echo "Error: both arguments must be numbers"
-  exit 1
-fi
-
 file="part$1.cpp"
 input="input.$2"
 
