@@ -30,14 +30,14 @@ while true; do
             -O3 \
             $file
 
-        start_time_us=$EPOCHREALTIME
+        start_time_us=$(echo $EPOCHREALTIME | tr -d '.')
         ./main < $input
-        end_time_us=$EPOCHREALTIME
+        end_time_us=$(echo $EPOCHREALTIME | tr -d '.')
 
         delta_ms=$(( (end_time_us - start_time_us) / 1000 ))
 
         echo
-        echo $delta_ms
+        echo "Took $delta_ms ms"
 
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
