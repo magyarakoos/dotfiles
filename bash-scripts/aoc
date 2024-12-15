@@ -39,6 +39,8 @@ while true; do
         echo
         echo "Took $delta_ms ms"
 
+        col_width=$COLUMNS
+
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
     fi
