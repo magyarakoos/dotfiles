@@ -27,6 +27,7 @@ while true; do
 
         clang++ -o main \
             -std=c++20 \
+            -static \
             -O3 \
             $file
 
