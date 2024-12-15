@@ -23,7 +23,7 @@ while true; do
     if [[ $ATIME != $LTIME ]] then
         LTIME=$ATIME
 
-
+        cpprun $file main < $input
 
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
