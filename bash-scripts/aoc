@@ -19,11 +19,12 @@ LTIME=`stat -c %Z $file`
 while true; do
     ATIME=`stat -c %Z $file`
 
-    if [$ATIME != $LTIME] then
+    if [[ $ATIME != $LTIME ]] then
+        $LTIME = $ATIME
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
     fi
-    sleep 1
+    sleep 0.1
     
     # # Compile the source
     # clang++ -o main \
