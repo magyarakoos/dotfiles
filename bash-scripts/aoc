@@ -12,6 +12,12 @@ if ! [[ "$1" =~ ^[0-9]+$ ]] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
+file="part$1.cpp"
+
+LTIME=`stat -c %Z $1`
+
+echo "watching $file for changes..."
+
 # Compile the source
 clang++ -o main \
     -std=c++20 \
