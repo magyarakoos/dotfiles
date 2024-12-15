@@ -31,7 +31,8 @@ while true; do
             $file
 
         start_time=$EPOCHREALTIME
-        echo $start_time
+        ./main < $input
+        end_time=$EPOCHREALTIME
 
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
