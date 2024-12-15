@@ -28,6 +28,9 @@ while true; do
             -O3 \
             $file
 
+        start_time = ${echo $EPOCHREALTIME}
+        echo start_time
+
         printf '%*s' $COLUMNS | tr ' ' '-'
         echo "Watching $file for changes..."
     fi
