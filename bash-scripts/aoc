@@ -60,14 +60,12 @@ while true; do
     FILE_MOD=`stat -c %Z $file`
     INPUT_MOD=`stat -c %Z $input`
 
-    if [[ LATEST_FILE_MOD != LATEST_INPUT_MOD || $LATEST_INPUT_MOD != $INPUT_MOD ]]; then
+    if [[ $LATEST_FILE_MOD != $LATEST_INPUT_MOD || $LATEST_INPUT_MOD != $INPUT_MOD ]]; then
         LATEST_FILE_MOD=$FILE_MOD
         LATEST_INPUT_MOD=$INPUT_MOD
     
         command_running=true
-
-        run_code()
-
+        run_code
         command_running=false
     fi
     sleep 0.2
