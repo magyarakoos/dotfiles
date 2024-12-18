@@ -41,6 +41,8 @@ run_code() {
     printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
 }
 
+# If this is true, then a SIGINT (Ctrl+C) will only terminate the code running,
+# and not the script itself
 command_running=false
 
 while true; do
