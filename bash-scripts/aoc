@@ -65,7 +65,7 @@ while true; do
         exit 1
     fi
 
-    if [[ $LATEST_FILE_MOD != $LATEST_INPUT_MOD || $LATEST_INPUT_MOD != $INPUT_MOD ]]; then
+    if [[ $LATEST_FILE_MOD != $FILE_MOD || $LATEST_INPUT_MOD != $INPUT_MOD ]]; then
         LATEST_FILE_MOD=$FILE_MOD
         LATEST_INPUT_MOD=$INPUT_MOD
     
