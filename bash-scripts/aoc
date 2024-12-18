@@ -9,7 +9,7 @@ fi
 file="part$1.cpp"
 input="input.$2"
 
-
+# Automatically recompile when either the input or the file changes
 LATEST_FILE_MOD=0
 LATEST_INPUT_MOD=0
 
@@ -17,8 +17,9 @@ while true; do
     FILE_MOD=`stat -c %Z $file`
     INPUT_MOD=`stat -c %Z $input`
 
-    if [[ $ATIME != $LTIME ]] then
-        LTIME=$ATIME
+    if [[ LATEST_FILE_MOD != LATEST_INPUT_MOD ] || [ $LATEST_INPUT_MOD != $INPUT_MOD ]] then
+        LATEST_FILE_MOD=$FILE_MOD
+        LATEST_INPUT_MOD=$INPUT_MOD
 
         echo -e "\nCompiling source..."
 
@@ -45,6 +46,6 @@ while true; do
         echo -e "| Took \e[31m$delta_ms\e[0m ms"
         printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
     fi
-    sleep 1
+    sleep 0.2
 done
 
