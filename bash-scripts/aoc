@@ -9,7 +9,7 @@ fi
 # Signal handler for SIGINT
 handle_sigint() {
     if $command_running; then
-        echo "Caught SIGINT. Interrupting the current command but not exiting the script."
+        # Caught SIGINT, interrupting the current command but not exiting the script
     else
         # Exit the script if no command is running
         exit 1  
