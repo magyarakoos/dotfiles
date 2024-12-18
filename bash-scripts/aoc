@@ -6,6 +6,19 @@ if [[ $# -lt 2 ]]; then
   exit 1
 fi
 
+# Signal handler for SIGINT
+handle_sigint() {
+  if $command_running; then
+    echo "Caught SIGINT. Interrupting the current command but not exiting the script."
+  else
+    echo "Caught SIGINT. Exiting the script."
+    exit 1  # Exit the script if no command is running
+  fi
+}
+
+# Trap SIGINT and call the handler
+trap handle_sigint SIGINT
+
 file="part$1.cpp"
 input="input.$2"
 
@@ -52,7 +65,10 @@ while true; do
     if [[ LATEST_FILE_MOD != LATEST_INPUT_MOD ] || [ $LATEST_INPUT_MOD != $INPUT_MOD ]] then
         LATEST_FILE_MOD=$FILE_MOD
         LATEST_INPUT_MOD=$INPUT_MOD
-
+    
+        command_running=true
+        run_code()
+        command_running=false
     fi
     sleep 0.2
 done
