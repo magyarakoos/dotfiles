@@ -9,10 +9,13 @@ fi
 file="part$1.cpp"
 input="input.$2"
 
-LTIME=`stat -c %Z $file`
+
+LATEST_FILE_MOD=0
+LATEST_INPUT_MOD=0
 
 while true; do
-    ATIME=`stat -c %Z $file`
+    FILE_MOD=`stat -c %Z $file`
+    INPUT_MOD=`stat -c %Z $input`
 
     if [[ $ATIME != $LTIME ]] then
         LTIME=$ATIME
