@@ -35,7 +35,7 @@ run_code() {
 
     if [[ $? != 0 ]] then
         echo -e "Compilation failed.\n"
-        continue
+        return
     fi
     
     echo -e "Running...\n"
