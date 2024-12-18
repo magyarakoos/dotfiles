@@ -8,9 +8,7 @@ fi
 
 # Signal handler for SIGINT
 handle_sigint() {
-    if $command_running; then
-        # Caught SIGINT, interrupting the current command but not exiting the script
-    else
+    if ! $command_running; then
         # Exit the script if no command is running
         exit 1  
     fi
@@ -62,7 +60,7 @@ while true; do
     FILE_MOD=`stat -c %Z $file`
     INPUT_MOD=`stat -c %Z $input`
 
-    if [[ LATEST_FILE_MOD != LATEST_INPUT_MOD ] || [ $LATEST_INPUT_MOD != $INPUT_MOD ]] then
+    if [ LATEST_FILE_MOD != LATEST_INPUT_MOD ] || [ $LATEST_INPUT_MOD != $INPUT_MOD ] then
         LATEST_FILE_MOD=$FILE_MOD
         LATEST_INPUT_MOD=$INPUT_MOD
     
