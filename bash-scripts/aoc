@@ -65,7 +65,9 @@ while true; do
         LATEST_INPUT_MOD=$INPUT_MOD
     
         command_running=true
+
         run_code()
+
         command_running=false
     fi
     sleep 0.2
