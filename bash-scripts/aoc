@@ -41,6 +41,8 @@ run_code() {
     printf '└%*s' $(($COLUMNS - 1)) | tr ' ' '-'
 }
 
+command_running=false
+
 while true; do
     FILE_MOD=`stat -c %Z $file`
     INPUT_MOD=`stat -c %Z $input`
