@@ -60,6 +60,7 @@ while true; do
     FILE_MOD=`stat -c %Z $file`
     INPUT_MOD=`stat -c %Z $input`
 
+    # Either the file or the input is missing, terminate now
     if [[ $? != 0 ]] then                                                                                                                                                                                 
         exit 1
     fi
