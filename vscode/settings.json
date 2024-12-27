@@ -37,5 +37,6 @@
       "cmake.pinnedCommands": [
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
-      ]
+      ],
+      "editor.inlayHints.enabled": "off"
 }
