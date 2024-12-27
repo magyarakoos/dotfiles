@@ -48,6 +48,7 @@ export PATH="$PATH:/home/akos/.cargo/bin"
 export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 export PICO_SDK_PATH="$HOME/.pico-sdk"
+export UIUA_RECURSION_LIMIT=100000
 
 # Source local files
 z4h source ~/.env.zsh
