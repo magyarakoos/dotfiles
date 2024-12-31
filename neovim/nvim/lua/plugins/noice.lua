@@ -13,9 +13,9 @@ local noice_opts = {
     },
     -- you can enable a preset for easier configuration
     presets = {
-        bottom_search = true, -- use a classic bottom cmdline for search
+        bottom_search = true,         -- use a classic bottom cmdline for search
         long_message_to_split = true, -- long messages will be sent to a split
-        inc_rename = true, -- enables an input dialog for inc-rename.nvim
+        inc_rename = true,            -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = true,
     },
 
@@ -44,7 +44,7 @@ return {
                 opts = {
                     render = 'compact',
                     stages = 'fade',
-                    timeout = 2000,
+                    timeout = 200,
                     fps = 60,
                 },
             },

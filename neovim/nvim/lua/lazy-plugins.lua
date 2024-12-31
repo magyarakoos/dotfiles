@@ -90,4 +90,4 @@ require('lazy').setup({
         build = ':TSUpdate',
     },
     { import = 'plugins' },
-}, { change_detection = { notify = true }, defaults = { lazy = true } })
+}, { change_detection = { notify = false }, defaults = { lazy = true } })
