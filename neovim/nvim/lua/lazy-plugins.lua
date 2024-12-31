@@ -89,12 +89,5 @@ require('lazy').setup({
         dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
         build = ':TSUpdate',
     },
-    {
-        'rcarriga/nvim-notify',
-        opts = {
-            timeout = 100,
-        },
-    },
-
     { import = 'plugins' },
 }, { change_detection = { notify = false }, defaults = { lazy = true } })
