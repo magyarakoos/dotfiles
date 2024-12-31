@@ -1,5 +1,4 @@
----@module "noice"
----@type NoiceConfig
+---@module "noice" @type NoiceConfig
 local noice_opts = {
     lsp = {
         -- hover = { enabled = false },
@@ -44,7 +43,7 @@ return {
                 opts = {
                     render = 'compact',
                     stages = 'fade',
-                    timeout = 200,
+                    timeout = 2000,
                     fps = 60,
                 },
             },
