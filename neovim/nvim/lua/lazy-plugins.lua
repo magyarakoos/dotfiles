@@ -6,8 +6,8 @@ require('lazy').setup({
         cmd = 'UndotreeToggle',
         keys = { { '<leader>u', '<cmd>UndotreeToggle<CR>', 'Undotree' } },
     },
-    { 'tpope/vim-surround', event = 'VeryLazy' },
-    { 'tpope/vim-repeat', event = 'VeryLazy' },
+    { 'tpope/vim-surround',    event = 'VeryLazy' },
+    { 'tpope/vim-repeat',      event = 'VeryLazy' },
     { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {} },
     {
         'onsails/lspkind.nvim',
@@ -84,11 +84,16 @@ require('lazy').setup({
             },
         },
     },
-
     {
         'nvim-treesitter/nvim-treesitter',
         dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
         build = ':TSUpdate',
+    },
+    {
+        'rcarriga/nvim-notify',
+        opts = {
+            timeout = 100,
+        },
     },
 
     { import = 'plugins' },
