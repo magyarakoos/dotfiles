@@ -40,5 +40,5 @@
   ],
   "editor.inlayHints.enabled": "off",
   "editor.formatOnSave": true,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange""supercollider.sclangCmd": false
 }
