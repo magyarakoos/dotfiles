@@ -2,7 +2,7 @@
 using namespace std;
 #define int int64_t
 
-const int INF = 2e9, MAXN = 2e5, MOD = 1e9 + 7;
+const int INF = 1e18, MAXN = 2e5, MOD = 1e9 + 7;
 
 #define cases 0
 void solve() {}
