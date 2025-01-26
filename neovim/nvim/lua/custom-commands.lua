@@ -1,9 +1,6 @@
 -- Automagically format on save
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
--- Map the custom command to <Leader>fm
-vim.api.nvim_set_keymap("n", "<Leader>fm", ":lua Fmt_command()<CR>", { noremap = true, silent = true })
-
 function Reset_input_macro()
     -- Path to the input file
     local input = vim.fn.expand("%:p:h") .. "/input"
