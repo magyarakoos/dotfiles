@@ -61,5 +61,5 @@ vim.api.nvim_set_keymap("n", "<Leader>b", ":lua Run_script_macro()<CR>", { norem
 vim.api.nvim_set_keymap("n", "<Leader>eb", ":lua Reset_input_macro()<CR>", { noremap = true, silent = true })
 
 -- Open a Kitty window here
-vim.api.nvim_set_keymap("n", "<Leader>k", ":exe 'silent !kitty --detach --directory ' . %:p:h<CR>",
+vim.api.nvim_set_keymap("n", "<Leader>k", ":exe 'silent !kitty --detach --directory ' . expand('%:p:h')<CR>",
     { noremap = true, silent = true })
