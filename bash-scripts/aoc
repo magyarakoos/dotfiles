@@ -66,13 +66,12 @@ while true; do
 
     INPUT_MOD=`stat -c %Z $input`
 
-    # The file is missing, terminate now
+    # The input is missing, open it in an editor
     if [[ $? != 0 ]] then
         nvim input
     fi
 
     INPUT_MOD=`stat -c %Z $input`
-
 
     if [[ $LATEST_FILE_MOD != $FILE_MOD || $LATEST_INPUT_MOD != $INPUT_MOD ]]; then
         LATEST_FILE_MOD=$FILE_MOD
