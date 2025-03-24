@@ -5,7 +5,7 @@ local on_attach = function(args)
     local bufnr = args.buf
     ---@type CustomMapping[]
     local mappings = {
-        { 'crr',        lsp.code_action,         desc = 'Code Actions' },
+        { 'ca',         lsp.code_action,         desc = 'Code Actions' },
         {
             'gh',
             function()
