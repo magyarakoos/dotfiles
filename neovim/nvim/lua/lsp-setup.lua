@@ -5,7 +5,7 @@ local on_attach = function(args)
     local bufnr = args.buf
     ---@type CustomMapping[]
     local mappings = {
-        { 'ca',         lsp.code_action,         desc = 'Code Actions' },
+        { 'ca',         lsp.code_action,           desc = 'Code Actions' },
         {
             'gh',
             function()
@@ -13,13 +13,14 @@ local on_attach = function(args)
             end,
             desc = 'Toggle Inlay Hints',
         },
-        { 'gd',         tb.lsp_definitions,      desc = 'Goto Definition' },
-        { 'gr',         tb.lsp_references,       desc = 'Goto References' },
-        { 'gI',         tb.lsp_implementations,  desc = 'Goto Implementation' },
-        { '<leader>D',  tb.lsp_type_definitions, desc = 'Type Definition' },
-        { '<leader>ds', tb.lsp_document_symbols, desc = 'Document Symbols' },
-        { '<C-S-k>',    lsp.signature_help,      desc = 'Signature Documentation' },
-        { 'gD',         lsp.declaration,         desc = 'Goto Declaration' },
+        { 'e',          vim.diagnostic.open_float, desc = 'Show Diagnostic' },
+        { 'gd',         tb.lsp_definitions,        desc = 'Goto Definition' },
+        { 'gr',         tb.lsp_references,         desc = 'Goto References' },
+        { 'gI',         tb.lsp_implementations,    desc = 'Goto Implementation' },
+        { '<leader>D',  tb.lsp_type_definitions,   desc = 'Type Definition' },
+        { '<leader>ds', tb.lsp_document_symbols,   desc = 'Document Symbols' },
+        { '<C-S-k>',    lsp.signature_help,        desc = 'Signature Documentation' },
+        { 'gD',         lsp.declaration,           desc = 'Goto Declaration' },
     }
 
     for _, map in ipairs(mappings) do
