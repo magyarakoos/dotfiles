@@ -57,8 +57,8 @@ function Run_script_macro()
 end
 
 -- Set up the key mapping for the macro
-vim.api.nvim_set_keymap("n", "<Leader>b", ":lua Run_script_macro()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>eb", ":lua Reset_input_macro()<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>b", ":lua Run_script_macro()<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>eb", ":lua Reset_input_macro()<CR>", { noremap = true, silent = true })
 
 -- Open a Kitty window here
 vim.api.nvim_set_keymap("n", "<Leader>k", ":exe 'silent !kitty --detach --directory ' . expand('%:p:h')<CR>",
