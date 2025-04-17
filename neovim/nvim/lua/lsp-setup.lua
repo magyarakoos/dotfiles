@@ -66,7 +66,7 @@ local servers = {
     htmx = {},
     vimls = {},
     tsserver = { typescript = tsserver_opts, javascript = tsserver_opts },
-    html = { filetypes = { 'html', 'jinja' } },
+    html = { filetypes = { 'html', 'htmldjango' } },
     templ = {},
     gopls = {},
     pyright = {},
@@ -93,7 +93,7 @@ local servers = {
         filetypes = { 'json', 'jsonc' },
     },
 
-    emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'jinja' } },
+    emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'htmldjango' } },
 
     lua_ls = {
         Lua = {
