@@ -80,4 +80,11 @@ vim.defer_fn(function()
             },
         },
     }
+
+    require('nvim-treesitter').define_modules({
+        html_tera_template = {
+            highlight = { enable = true },
+            parser = "jinja",
+        },
+    })
 end, 0)
