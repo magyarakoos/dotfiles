@@ -4,10 +4,10 @@ vim.defer_fn(function()
     parser_config.lil = {
         install_info = {
             url = '~/Documents/lil/tree-sitter-lil', -- local path or git repo
-            files = { 'src/parser.c' }, -- note that some parsers also require src/scanner.c or src/scanner.cc
+            files = { 'src/parser.c' },              -- note that some parsers also require src/scanner.c or src/scanner.cc
             -- optional entries:
-            generate_requires_npm = false, -- if stand-alone parser without npm dependencies
-            requires_generate_from_grammar = false, -- if folder contains pre-generated src/parser.c
+            generate_requires_npm = false,           -- if stand-alone parser without npm dependencies
+            requires_generate_from_grammar = false,  -- if folder contains pre-generated src/parser.c
         },
     }
 
@@ -32,6 +32,7 @@ vim.defer_fn(function()
             'markdown',
             'markdown_inline',
             'toml',
+            'jinja',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
