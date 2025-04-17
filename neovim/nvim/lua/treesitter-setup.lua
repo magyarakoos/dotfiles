@@ -38,6 +38,7 @@ vim.defer_fn(function()
             'markdown',
             'markdown_inline',
             'toml',
+            'jinja2'
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
