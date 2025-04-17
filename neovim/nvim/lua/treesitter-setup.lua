@@ -13,7 +13,7 @@ vim.defer_fn(function()
 
     vim.filetype.add({
         pattern = {
-            [".*%.html%.tera"] = "html",
+            [".*%.html%.tera"] = "jinja2",
         },
     })
 
@@ -44,7 +44,6 @@ vim.defer_fn(function()
         auto_install = true,
 
         highlight = { enable = true },
-        additional_vim_regex_highlighting = { 'html.tera' },
         indent = { enable = true },
         textobjects = {
             select = {
@@ -81,11 +80,4 @@ vim.defer_fn(function()
             },
         },
     }
-
-    require('nvim-treesitter').define_modules({
-        html_tera_template = {
-            highlight = { enable = true },
-            parser = "jinja",
-        },
-    })
 end, 0)
