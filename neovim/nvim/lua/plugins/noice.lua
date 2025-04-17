@@ -29,7 +29,10 @@ local noice_opts = {
         },
     },
 
-    debug = true,
+    messages = {
+        debug = false,
+    },
+
 }
 
 ---@type LazySpec
