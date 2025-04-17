@@ -11,6 +11,15 @@ vim.defer_fn(function()
         },
     }
 
+    parser_config.jinja2 = {
+        install_info = {
+            url = "https://github.com/dbt-labs/tree-sitter-jinja2",
+            files = { "src/parser.c" },
+            branch = "main",
+        },
+        filetype = "jinja2",
+    }
+
     vim.filetype.add({
         pattern = {
             [".*%.html%.tera"] = "jinja2",
@@ -38,7 +47,7 @@ vim.defer_fn(function()
             'markdown',
             'markdown_inline',
             'toml',
-            'jinja2'
+            'jinja2',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
