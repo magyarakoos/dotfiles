@@ -11,7 +11,7 @@ vim.defer_fn(function()
         },
     }
 
-    parser_config.jinja2 = {
+    parser_config.jinja = {
         install_info = {
             url = "https://github.com/dbt-labs/tree-sitter-jinja2",
             files = { "src/parser.c" },
