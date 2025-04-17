@@ -93,7 +93,7 @@ local servers = {
         filetypes = { 'json', 'jsonc' },
     },
 
-    emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'jinja2' } },
+    emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'jinja' } },
 
     lua_ls = {
         Lua = {
