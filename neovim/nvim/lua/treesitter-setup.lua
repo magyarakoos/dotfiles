@@ -11,21 +11,6 @@ vim.defer_fn(function()
         },
     }
 
-    parser_config.jinja = {
-        install_info = {
-            url = "https://github.com/dbt-labs/tree-sitter-jinja2",
-            files = { "src/parser.c" },
-            branch = "main",
-        },
-        filetype = "jinja",
-    }
-
-    vim.filetype.add({
-        pattern = {
-            [".*%.html%.tera"] = "jinja",
-        },
-    })
-
     require('nvim-treesitter.configs').setup {
         -- Add languages to be installed here that you want installed for treesitter
         ensure_installed = {
@@ -47,7 +32,7 @@ vim.defer_fn(function()
             'markdown',
             'markdown_inline',
             'toml',
-            'jinja',
+            'htmldjango',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
