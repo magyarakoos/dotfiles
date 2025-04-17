@@ -72,6 +72,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
+    sqlls = {},
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
