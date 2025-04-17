@@ -17,12 +17,12 @@ vim.defer_fn(function()
             files = { "src/parser.c" },
             branch = "main",
         },
-        filetype = "jinja2",
+        filetype = "jinja",
     }
 
     vim.filetype.add({
         pattern = {
-            [".*%.html%.tera"] = "jinja2",
+            [".*%.html%.tera"] = "jinja",
         },
     })
 
@@ -47,7 +47,7 @@ vim.defer_fn(function()
             'markdown',
             'markdown_inline',
             'toml',
-            'jinja2',
+            'jinja',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)

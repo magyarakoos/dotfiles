@@ -66,7 +66,7 @@ local servers = {
     htmx = {},
     vimls = {},
     tsserver = { typescript = tsserver_opts, javascript = tsserver_opts },
-    html = { filetypes = { 'html', 'jinja2' } },
+    html = { filetypes = { 'html', 'jinja' } },
     templ = {},
     gopls = {},
     pyright = {},
