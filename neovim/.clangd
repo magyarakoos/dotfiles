@@ -3,7 +3,8 @@ CompileFlags:
     Add: [
         -DLOCAL,
         -I/home/akos/cpp-include/,
-        -std=c++20
+        -std=c++20,
+        -Wall
     ]
 Diagnostics:
   Suppress:
