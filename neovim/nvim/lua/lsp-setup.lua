@@ -72,6 +72,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
+    tailwind_language_server = { filetypes = { 'html', 'htmldjango' } },
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
