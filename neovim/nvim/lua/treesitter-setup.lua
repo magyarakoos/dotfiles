@@ -14,6 +14,7 @@ vim.defer_fn(function()
     vim.filetype.add({
         pattern = {
             ['.*%.html%.tera'] = 'htmldjango',
+            ['.*%.html'] = 'htmldjango',
         },
     })
 
