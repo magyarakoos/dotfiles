@@ -1,2 +1,38 @@
 #!/bin/bash
 
+set -euo pipefail
+
+# GitHub repo info
+GH_REPO="uiua-lang/uiua"
+ASSET_NAME="uiua-bin-x86_64-unknown-linux-gnu.zip"
+ZIP_PATH="/tmp/$ASSET_NAME"
+
+# Destination binary path
+DEST_DIR="$HOME/.local/bin"
+DEST_BIN="$DEST_DIR/uiua"
+
+# Get download URL for the 'latest' tag
+URL=$(curl -s "https://api.github.com/repos/$GH_REPO/releases/tags/latest" \
+  | grep "browser_download_url" \
+  | grep "$ASSET_NAME" \
+  | cut -d '"' -f 4)
+
+if [[ -z "$URL" ]]; then
+    echo "Could not find asset URL for $ASSET_NAME"
+    exit 1
+fi
+
+# Download zip file
+curl -L "$URL" -o "$ZIP_PATH"
+
+# Unzip and replace binary
+unzip -o "$ZIP_PATH" -d /tmp/uiua-latest
+mkdir -p "$DEST_DIR"
+mv /tmp/uiua-latest/uiua "$DEST_BIN"
+chmod +x "$DEST_BIN"
+
+# Cleanup
+rm -rf "$ZIP_PATH" /tmp/uiua-latest
+
+echo "✅ Uiua updated to latest binary from main."
+
