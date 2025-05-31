@@ -2,16 +2,16 @@
 
 set -euo pipefail
 
-# GitHub repo info
+# github repo info
 GH_REPO="uiua-lang/uiua"
 ASSET_NAME="uiua-bin-x86_64-unknown-linux-gnu.zip"
 ZIP_PATH="/tmp/$ASSET_NAME"
 
-# Destination binary path
+# destination binary path
 DEST_DIR="$HOME/.local/bin"
 DEST_BIN="$DEST_DIR/uiua"
 
-# Get download URL for the 'latest' tag
+# get download url
 URL=$(curl -s "https://api.github.com/repos/$GH_REPO/releases/tags/latest" \
   | grep "browser_download_url" \
   | grep "$ASSET_NAME" \
@@ -22,17 +22,16 @@ if [[ -z "$URL" ]]; then
     exit 1
 fi
 
-# Download zip file
+# download zip file
 curl -L "$URL" -o "$ZIP_PATH"
 
-# Unzip and replace binary
+# unzip and replace binary
 unzip -o "$ZIP_PATH" -d /tmp/uiua-latest
 mkdir -p "$DEST_DIR"
 mv /tmp/uiua-latest/uiua "$DEST_BIN"
 chmod +x "$DEST_BIN"
 
-# Cleanup
 rm -rf "$ZIP_PATH" /tmp/uiua-latest
 
-echo "✅ Uiua updated to latest binary from main."
+echo "updated uiua sl (sima liba)"
 
