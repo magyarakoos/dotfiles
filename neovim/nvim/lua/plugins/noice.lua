@@ -48,7 +48,11 @@ return {
                 opts = {
                     render = 'compact',
                     stages = 'static',
+<<<<<<< HEAD
                     timeout = 2000,
+=======
+                    timeout = 5000,
+>>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
                     fps = 60,
                 },
             },

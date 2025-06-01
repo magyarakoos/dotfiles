@@ -5,7 +5,11 @@ local on_attach = function(args)
     local bufnr = args.buf
     ---@type CustomMapping[]
     local mappings = {
+<<<<<<< HEAD
         { 'ca',         lsp.code_action,           desc = 'Code Actions' },
+=======
+        { 'ca',        lsp.code_action,         desc = 'Code Actions' },
+>>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
         {
             'gh',
             function()
@@ -13,7 +17,11 @@ local on_attach = function(args)
             end,
             desc = 'Toggle Inlay Hints',
         },
+<<<<<<< HEAD
         { 'e',          vim.diagnostic.open_float, desc = 'Show Diagnostic' },
+=======
+        { 'e',          vim.diagnostic.open_float, desc = "Show diagnostic" },
+>>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
         { 'gd',         tb.lsp_definitions,        desc = 'Goto Definition' },
         { 'gr',         tb.lsp_references,         desc = 'Goto References' },
         { 'gI',         tb.lsp_implementations,    desc = 'Goto Implementation' },
@@ -66,7 +74,13 @@ local servers = {
     htmx = {},
     vimls = {},
     tsserver = { typescript = tsserver_opts, javascript = tsserver_opts },
+<<<<<<< HEAD
     html = { filetypes = { 'html', 'htmldjango' } },
+=======
+    html = {
+        filetypes = { "html", "templ", "htmldjango" }
+    },
+>>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
     templ = {},
     gopls = {},
     pyright = {},
@@ -94,7 +108,13 @@ local servers = {
         filetypes = { 'json', 'jsonc' },
     },
 
+<<<<<<< HEAD
     emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'htmldjango' } },
+=======
+    emmet_ls = {
+        filetypes = { "html", "htmldjango", "svelte", "templ" },
+    },
+>>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
 
     lua_ls = {
         Lua = {
@@ -117,7 +137,7 @@ local custom_servers = {
         filetypes = { 'rust' },
         ['rust-analyzer'] = {
             cargo = { allFeatures = true },
-            rustfmt = { extraArgs = { '+nightly' } },
+            rustfmt = {},
         },
     },
 }
@@ -143,7 +163,9 @@ local function lspconfig_setup(server_list)
     end
 end
 
-mason_lspconfig.setup_handlers { lspconfig_setup(servers) }
+for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
+    lspconfig_setup(servers)(server_name)
+end
 
 local custom_setup = lspconfig_setup(custom_servers)
 

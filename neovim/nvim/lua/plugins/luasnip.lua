@@ -12,7 +12,7 @@ local snippets = {
         s('ty', fmt('/** @type {{{}}} */', i(0))),
     },
     svelte = {
-        s('eft', fmt('$effect(() => {{{}}})', i(0)))
+        s('eft', fmt('$effect(() => {{{}}})', i(0))),
     }
 }
 
@@ -21,8 +21,10 @@ for fts, snip in pairs(snippets) do
         for _, ft in ipairs(fts) do
             ls.add_snippets(ft, snip)
         end
+    elseif type(fts) == 'string' then
+        ls.add_snippets(fts, snip)
     end
-    ls.add_snippets(fts, snip)
 end
 
 return {}
+
