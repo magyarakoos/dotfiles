@@ -6,6 +6,7 @@ return {
         keymaps = { ['<leader>q'] = 'actions.close' },
         float = { max_width = 50, max_height = 20 },
         delete_to_trash = true,
+        show_hidden = true,
     },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     keys = {
