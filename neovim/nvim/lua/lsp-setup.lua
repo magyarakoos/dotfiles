@@ -66,13 +66,9 @@ local servers = {
     htmx = {},
     vimls = {},
     tsserver = { typescript = tsserver_opts, javascript = tsserver_opts },
-<<<<<<< HEAD
-    html = { filetypes = { 'html', 'htmldjango' } },
-=======
     html = {
         filetypes = { "html", "templ", "htmldjango" }
     },
->>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
     templ = {},
     gopls = {},
     pyright = {},
@@ -100,13 +96,9 @@ local servers = {
         filetypes = { 'json', 'jsonc' },
     },
 
-<<<<<<< HEAD
-    emmet_language_server = { filetypes = { 'html', 'svelte', 'templ', 'htmldjango' } },
-=======
     emmet_ls = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
->>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
 
     lua_ls = {
         Lua = {
