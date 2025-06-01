@@ -5,11 +5,7 @@ local on_attach = function(args)
     local bufnr = args.buf
     ---@type CustomMapping[]
     local mappings = {
-<<<<<<< HEAD
-        { 'ca',         lsp.code_action,           desc = 'Code Actions' },
-=======
         { 'ca',        lsp.code_action,         desc = 'Code Actions' },
->>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
         {
             'gh',
             function()
@@ -17,11 +13,7 @@ local on_attach = function(args)
             end,
             desc = 'Toggle Inlay Hints',
         },
-<<<<<<< HEAD
-        { 'e',          vim.diagnostic.open_float, desc = 'Show Diagnostic' },
-=======
         { 'e',          vim.diagnostic.open_float, desc = "Show diagnostic" },
->>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
         { 'gd',         tb.lsp_definitions,        desc = 'Goto Definition' },
         { 'gr',         tb.lsp_references,         desc = 'Goto References' },
         { 'gI',         tb.lsp_implementations,    desc = 'Goto Implementation' },
