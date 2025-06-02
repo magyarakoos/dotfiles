@@ -59,7 +59,15 @@ local tsserver_opts = {
 local servers = {
     bashls = {},
     jdtls = {},
-    cssls = {},
+    cssls = {
+          settings = {
+    css = {
+      validate = true,
+      lint = {
+        unknownAtRules = "ignore",
+      }
+    },},
+    },
     svelte = {},
     ocamllsp = {},
     taplo = {},
