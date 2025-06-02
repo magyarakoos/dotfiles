@@ -156,9 +156,9 @@ local function lspconfig_setup(server_list)
     end
 end
 
--- for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
---     lspconfig_setup(servers)(server_name)
--- end
+for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
+    lspconfig_setup(servers)(server_name)
+end
 
 local custom_setup = lspconfig_setup(custom_servers)
 
