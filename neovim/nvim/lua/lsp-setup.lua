@@ -156,9 +156,19 @@ local function lspconfig_setup(server_list)
     end
 end
 
-for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-    lspconfig_setup(servers)(server_name)
-end
+mason_lspconfig.setup_handlers {
+    function(server_name)
+        local config = servers[server_name] or {}
+        require('lspconfig')[server_name].setup {
+            capabilities = capabilities,
+            settings = config.settings,
+            cmd = config.cmd,
+            root_dir = config.root_dir,
+            filetypes = config.filetypes,
+            autostart = config.autostart,
+        }
+    end,
+}
 
 local custom_setup = lspconfig_setup(custom_servers)
 
