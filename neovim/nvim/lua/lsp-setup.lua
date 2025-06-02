@@ -59,7 +59,16 @@ local tsserver_opts = {
 local servers = {
     bashls = {},
     jdtls = {},
-    cssls = {},
+    cssls = {
+        settings = {
+            css = {
+                validate = true,
+                lint = {
+                    unknownAtRules = "ignore",
+                }
+            },
+        },
+    },
     svelte = {},
     ocamllsp = {},
     taplo = {},
@@ -74,7 +83,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
-    tailwindcss = { filetypes = { 'css', 'html', 'htmldjango' } },
+    tailwindcss = { filetypes = { 'html', 'htmldjango' } },
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
