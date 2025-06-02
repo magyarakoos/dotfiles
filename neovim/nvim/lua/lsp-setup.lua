@@ -1,6 +1,5 @@
 local tb = require 'telescope.builtin'
 local lsp = vim.lsp.buf
-local util = require 'lspconfig.util'
 
 local on_attach = function(args)
     local bufnr = args.buf
@@ -75,9 +74,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
-    tailwindcss = {
-        filetypes = { 'html', 'htmldjango' },
-    },
+    tailwindcss = { filetypes = { 'html', 'htmldjango' }},
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
