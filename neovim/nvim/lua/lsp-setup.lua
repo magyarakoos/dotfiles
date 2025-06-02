@@ -77,7 +77,7 @@ local servers = {
     rust_analyzer = {},
     tailwindcss = {
         filetypes = { 'html', 'htmldjango' },
-        root_dir = util.root_pattern('tailwind.config.js'),
+        root_dir = util.root_pattern('tailwind.css'),
     },
 
     clangd = { filetypes = { 'c', 'cpp' } },
