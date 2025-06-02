@@ -5,7 +5,7 @@ local on_attach = function(args)
     local bufnr = args.buf
     ---@type CustomMapping[]
     local mappings = {
-        { 'ca',        lsp.code_action,         desc = 'Code Actions' },
+        { 'ca',         lsp.code_action,           desc = 'Code Actions' },
         {
             'gh',
             function()
@@ -60,13 +60,14 @@ local servers = {
     bashls = {},
     jdtls = {},
     cssls = {
-          settings = {
-    css = {
-      validate = true,
-      lint = {
-        unknownAtRules = "ignore",
-      }
-    },},
+        settings = {
+            css = {
+                validate = true,
+                lint = {
+                    unknownAtRules = "ignore",
+                }
+            },
+        },
     },
     svelte = {},
     ocamllsp = {},
@@ -82,7 +83,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
-    tailwindcss = { filetypes = { 'html', 'htmldjango' }},
+    tailwindcss = { filetypes = { 'html', 'htmldjango' } },
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
