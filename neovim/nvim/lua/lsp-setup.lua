@@ -108,19 +108,6 @@ local servers = {
     emmet_ls = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
-
-    lua_ls = {
-        Lua = {
-            workspace = { checkThirdParty = false },
-            telemetry = { enable = false },
-            diagnostics = { disable = { 'missing-fields', 'need-check-nil' } },
-            hint = {
-                enable = true,
-                arrayIndex = 'Disable',
-            },
-            hover = { enumsLimit = 20 },
-        },
-    },
 }
 
 local custom_servers = {
