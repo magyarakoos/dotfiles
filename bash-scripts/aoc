@@ -30,12 +30,10 @@ run_code() {
 
     clang++ -o main \
         -std=c++20 \
-        -O3 \
+        -Og \
         -Wall \
-<<<<<<< HEAD
-=======
+        -Wextra \
         -g \
->>>>>>> f5e1e1f (sync: 2025-06-01 19:58:24)
         $file
 
     if [[ $? != 0 ]] then
