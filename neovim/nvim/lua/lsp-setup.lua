@@ -177,6 +177,7 @@ local function lspconfig_setup(server_list)
 end
 
 for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
+    print(server_name)
     lspconfig_setup(servers)(server_name)
 end
 
