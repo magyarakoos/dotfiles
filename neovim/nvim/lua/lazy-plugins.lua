@@ -84,10 +84,10 @@ require('lazy').setup({
             },
         },
     },
-    -- {
-    --     'nvim-treesitter/nvim-treesitter',
-    --     dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    --     build = ':TSUpdate',
-    -- },
-    -- { import = 'plugins' },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+        build = ':TSUpdate',
+    },
+    { import = 'plugins' },
 }, { change_detection = { notify = false }, defaults = { lazy = true } })
