@@ -87,21 +87,21 @@ local servers = {
 
     clangd = { filetypes = { 'c', 'cpp' } },
 
-    -- lua_ls = {
-    --     settings = {
-    --         Lua = {
-    --             runtime = { version = 'LuaJIT' },
-    --             diagnostics = {
-    --                 globals = { 'vim' },
-    --             },
-    --             workspace = {
-    --                 library = vim.api.nvim_get_runtime_file("", true),
-    --                 checkThirdParty = false,
-    --             },
-    --             telemetry = { enable = false },
-    --         },
-    --     },
-    -- },
+    lua_ls = {
+        settings = {
+            Lua = {
+                runtime = { version = 'LuaJIT' },
+                diagnostics = {
+                    globals = { 'vim' },
+                },
+                workspace = {
+                    library = vim.api.nvim_get_runtime_file("", true),
+                    checkThirdParty = false,
+                },
+                telemetry = { enable = false },
+            },
+        },
+    },
 
 
     ltex = {
@@ -168,4 +168,17 @@ local custom_setup = lspconfig_setup(custom_servers)
 
 for server_name, _ in pairs(custom_servers) do
     custom_setup(server_name)
+end
+
+local lspconfig = require('lspconfig')
+
+if not lspconfig.emmylua_ls then
+    lspconfig.emmylua_ls = {
+        default_config = {
+            cmd = { "false" }, -- a no-op command, so it never actually starts
+            filetypes = {},
+            root_dir = function() return nil end,
+            settings = {},
+        }
+    }
 end
