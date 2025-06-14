@@ -1,3 +1,19 @@
+local lspconfig = require('lspconfig')
+
+if not lspconfig.emmylua_ls then
+    lspconfig.emmylua_ls = {
+        default_config = {
+            cmd = { "false" },
+            filetypes = {},
+            root_dir = function() return nil end,
+            settings = {},
+        }
+    }
+end
+
+-- override setup to be no-op, so calling it won't throw errors or warnings
+lspconfig.emmylua_ls.setup = function() end
+
 local tb = require 'telescope.builtin'
 local lsp = vim.lsp.buf
 
@@ -171,14 +187,3 @@ for server_name, _ in pairs(custom_servers) do
 end
 
 local lspconfig = require('lspconfig')
-
--- if not lspconfig.emmylua_ls then
---     lspconfig.emmylua_ls = {
---         default_config = {
---             cmd = { "false" }, -- a no-op command, so it never actually starts
---             filetypes = {},
---             root_dir = function() return nil end,
---             settings = {},
---         }
---     }
--- end
