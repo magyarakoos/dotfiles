@@ -176,11 +176,8 @@ local function lspconfig_setup(server_list)
     end
 end
 
-print(vim.inspect(mason_lspconfig.get_installed_servers()))
-print(vim.inspect(custom_servers))
-
 for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-    if not server_name == "emmylua_ls" then
+    if server_name ~= "emmylua_ls" then
         lspconfig_setup(servers)(server_name)
     end
 end
