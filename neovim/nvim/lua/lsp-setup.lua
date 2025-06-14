@@ -176,9 +176,11 @@ local function lspconfig_setup(server_list)
     end
 end
 
+print(mason_lspconfig.get_installed_servers())
+print(custom_servers)
+
 for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
     if not server_name == "emmylua_ls" then
-        print(server_name)
         lspconfig_setup(servers)(server_name)
     end
 end
@@ -186,6 +188,5 @@ end
 local custom_setup = lspconfig_setup(custom_servers)
 
 for server_name, _ in pairs(custom_servers) do
-    print(server_name)
     custom_setup(server_name)
 end
