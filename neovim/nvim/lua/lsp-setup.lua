@@ -172,13 +172,13 @@ end
 
 local lspconfig = require('lspconfig')
 
-if not lspconfig.emmylua_ls then
-    lspconfig.emmylua_ls = {
-        default_config = {
-            cmd = { "false" }, -- a no-op command, so it never actually starts
-            filetypes = {},
-            root_dir = function() return nil end,
-            settings = {},
-        }
-    }
-end
+-- if not lspconfig.emmylua_ls then
+--     lspconfig.emmylua_ls = {
+--         default_config = {
+--             cmd = { "false" }, -- a no-op command, so it never actually starts
+--             filetypes = {},
+--             root_dir = function() return nil end,
+--             settings = {},
+--         }
+--     }
+-- end
