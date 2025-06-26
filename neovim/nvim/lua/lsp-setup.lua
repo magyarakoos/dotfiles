@@ -170,6 +170,10 @@ end
 
 local all_servers = merge_servers(custom_servers, servers)
 
+print(all_servers)
+
 for server_name, _ in pairs(all_servers) do
-    lspconfig_setup(all_servers)(server_name)
+    if not vim.lsp.get_active_clients({ name = server_name })[1] then
+        lspconfig_setup(all_servers)(server_name)
+    end
 end
