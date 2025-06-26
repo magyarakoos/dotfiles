@@ -154,10 +154,22 @@ local function lspconfig_setup(server_list)
     end
 end
 
-for server_name, _ in pairs(servers) do
-    lspconfig_setup(servers)(server_name)
+function merge_servers(a, b)
+    local result = {}
+
+    for k, v in pairs(b) do
+        result[k] = v
+    end
+
+    for k, v in pairs(a) do
+        result[k] = v
+    end
+
+    return result
 end
 
-for server_name, _ in pairs(custom_servers) do
-    lspconfig_setup(custom_servers)(server_name)
+local all_servers = merge_servers(custom_servers, servers)
+
+for server_name, _ in pairs(all_servers) do
+    lspconfig_setup(all_servers)(server_name)
 end
