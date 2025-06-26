@@ -74,7 +74,6 @@ local servers = {
     taplo = {},
     htmx = {},
     vimls = {},
-    tsserver = { typescript = tsserver_opts, javascript = tsserver_opts },
     html = {
         filetypes = { "html", "templ", "htmldjango" }
     },
