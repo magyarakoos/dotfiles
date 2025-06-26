@@ -172,17 +172,6 @@ local all_servers = merge_servers(custom_servers, servers)
 
 print(all_servers)
 
-local function is_lsp_attached(name)
-    for _, client in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
-        if client.name == name then
-            return true
-        end
-    end
-    return false
-end
-
 for server_name, _ in pairs(all_servers) do
-    if not is_lsp_attached(server_name) then
-        lspconfig_setup(all_servers)(server_name)
-    end
+    lspconfig_setup(all_servers)(server_name)
 end
