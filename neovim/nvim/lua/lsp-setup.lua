@@ -40,11 +40,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
-require('mason').setup()
-require("mason-lspconfig").setup({
-    automatic_installation = false, -- disable automatic install
-    ensure_installed = {},          -- make sure this is empty
-})
+-- require('mason').setup()
+-- require("mason-lspconfig").setup({
+--     automatic_installation = false, -- disable automatic install
+--     ensure_installed = {},          -- make sure this is empty
+-- })
 
 local tsserver_opts = {
     inlayHints = {
