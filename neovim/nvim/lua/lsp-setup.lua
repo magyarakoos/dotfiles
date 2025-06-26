@@ -135,6 +135,9 @@ local custom_servers = {
             rustfmt = {},
         },
     },
+    clangd = {
+        filetypes = { 'c', 'cpp' },
+    },
 }
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
