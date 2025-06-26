@@ -167,5 +167,5 @@ end
 local custom_setup = lspconfig_setup(custom_servers)
 
 for server_name, _ in pairs(custom_servers) do
-    custom_setup(server_name)
+    lspconfig_setup(custom_servers)(server_name)
 end
