@@ -46,19 +46,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --     ensure_installed = {},          -- make sure this is empty
 -- })
 
-local tsserver_opts = {
-    inlayHints = {
-        includeInlayParameterNameHints = 'all',
-        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-    },
-}
-
 local servers = {
     bashls = {},
     jdtls = {},
@@ -86,6 +73,7 @@ local servers = {
     nil_ls = {},
     rust_analyzer = {},
     tailwindcss = { filetypes = { 'html', 'htmldjango' } },
+    typescript_language_server = {},
 
     lua_ls = {
         settings = {
