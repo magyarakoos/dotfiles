@@ -73,7 +73,7 @@ local servers = {
     nil_ls = {},
     rust_analyzer = {},
     tailwindcss = { filetypes = { 'html', 'htmldjango' } },
-    typescript_language_server = {},
+    ts_ls = {},
 
     lua_ls = {
         settings = {
