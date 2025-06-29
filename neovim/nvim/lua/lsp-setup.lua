@@ -145,7 +145,7 @@ local function lspconfig_setup(server_list)
     end
 end
 
-function merge_servers(a, b)
+local function merge_servers(a, b)
     local result = {}
 
     for k, v in pairs(b) do
