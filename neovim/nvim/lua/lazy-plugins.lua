@@ -89,14 +89,5 @@ require('lazy').setup({
         dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
         build = ':TSUpdate',
     },
-    {
-        "edluffy/hologram.nvim",
-        lazy = false,
-        config = function()
-            require("hologram").setup {
-                auto_display = true
-            }
-        end,
-    },
     { import = 'plugins' },
 }, { change_detection = { notify = false }, defaults = { lazy = true } })
