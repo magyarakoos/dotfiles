@@ -90,7 +90,13 @@ require('lazy').setup({
         build = ':TSUpdate',
     },
     {
-        "3rd/image.nvim",
+        "edluffy/hologram.nvim",
+        lazy = false,
+        config = function()
+            require("hologram").setup {
+                auto_display = true
+            }
+        end,
     },
     { import = 'plugins' },
 }, { change_detection = { notify = false }, defaults = { lazy = true } })
