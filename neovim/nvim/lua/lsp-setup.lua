@@ -74,7 +74,7 @@ local servers = {
     rust_analyzer = {},
     tailwindcss = { filetypes = { 'html', 'htmldjango' } },
     ts_ls = {},
-    clangd = { filetypes = { 'c', 'cpp' } },
+    clangd = { filetypes = { 'cpp' } },
 
     lua_ls = {
         settings = {
