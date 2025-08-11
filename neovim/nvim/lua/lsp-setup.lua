@@ -119,12 +119,10 @@ local servers = {
 local custom_servers = {
     uiua = {},
     rust_analyzer = {
+        cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
         filetypes = { 'rust' },
         ['rust-analyzer'] = {
-            cargo = {
-                allFeatures = true,
-                target = "thumbv8m.main-none-eabihf"
-            },
+            cargo = { allFeatures = true },
             rustfmt = {},
         },
     },
