@@ -71,8 +71,6 @@ vim.o.clipboard = "unnamed"
 vim.o.spell = true
 vim.o.spelllang = "en_us"
 
-vim.opt.exrc = true
-
 vim.lsp.set_log_level(4)
 
 -- -- Enable transparency to match the terminal background
