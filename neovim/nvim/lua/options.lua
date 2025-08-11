@@ -71,12 +71,14 @@ vim.o.clipboard = "unnamed"
 vim.o.spell = true
 vim.o.spelllang = "en_us"
 
+vim.opt.exrc = true
+
 vim.lsp.set_log_level(4)
 
--- Enable transparency to match the terminal background
-vim.cmd([[
-highlight Normal guibg=NONE ctermbg=NONE
-highlight NonText guibg=NONE ctermbg=NONE
-highlight LineNr guibg=NONE ctermbg=NONE
-highlight StatusLine guibg=NONE ctermbg=NONE
-]])
+-- -- Enable transparency to match the terminal background
+-- vim.cmd([[
+-- highlight Normal guibg=NONE ctermbg=NONE
+-- highlight NonText guibg=NONE ctermbg=NONE
+-- highlight LineNr guibg=NONE ctermbg=NONE
+-- highlight StatusLine guibg=NONE ctermbg=NONE
+-- ]])
