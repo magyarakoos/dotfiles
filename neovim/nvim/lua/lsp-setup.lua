@@ -121,7 +121,10 @@ local custom_servers = {
     rust_analyzer = {
         filetypes = { 'rust' },
         ['rust-analyzer'] = {
-            cargo = { allFeatures = true },
+            cargo = {
+                allFeatures = true,
+                target = "thumbv8m.main-none-eabihf"
+            },
             rustfmt = {},
         },
     },
