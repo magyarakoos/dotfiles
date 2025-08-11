@@ -119,11 +119,14 @@ local servers = {
 local custom_servers = {
     uiua = {},
     rust_analyzer = {
-        cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
+        cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
         filetypes = { 'rust' },
         ['rust-analyzer'] = {
             cargo = { allFeatures = true },
             rustfmt = {},
+            checkOnSave = {
+                allTargets = false,
+            },
         },
     },
 }
