@@ -65,7 +65,9 @@ require('lazy').setup({
             },
         },
     },
-
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+    },
     {
         'lukas-reineke/indent-blankline.nvim',
         name = 'ibl',
