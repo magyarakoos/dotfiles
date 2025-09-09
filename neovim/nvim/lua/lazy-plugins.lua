@@ -67,6 +67,8 @@ require('lazy').setup({
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' }, -- if you use the mini.nvim suite
+        opts = {},
     },
     {
         'lukas-reineke/indent-blankline.nvim',
