@@ -48,7 +48,7 @@ return {
                 opts = {
                     render = 'compact',
                     stages = 'static',
-                    timeout = 2000,
+                    timeout = 10000,
                     fps = 60,
                 },
             },
