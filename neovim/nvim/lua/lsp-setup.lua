@@ -93,14 +93,14 @@ local servers = {
     },
 
 
-    -- ltex = {
-    --     autostart = false,
-    --     ltex = {
-    --         completionEnabled = true,
-    --         dictionary = { ['en-US'] = { 'uiua', 'nvim', 'vim', 'todo' } },
-    --         checkFrequency = 'save',
-    --     },
-    -- },
+    ltex = {
+        autostart = false,
+        ltex = {
+            completionEnabled = true,
+            dictionary = { ['en-US'] = { 'uiua', 'nvim', 'vim', 'todo' } },
+            checkFrequency = 'save',
+        },
+    },
 
     jsonls = {
         -- TODO: schema store stuff
