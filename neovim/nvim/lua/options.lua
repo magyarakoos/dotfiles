@@ -68,8 +68,8 @@ vim.o.updatetime = 50
 vim.o.colorcolumn = tostring(80)
 vim.o.mouse = "" -- Disable mouse
 vim.o.clipboard = "unnamed"
-vim.o.spell = true
-vim.o.spelllang = "en_us"
+-- vim.o.spell = true
+-- vim.o.spelllang = "en_us"
 
 vim.lsp.set_log_level(4)
 
