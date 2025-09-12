@@ -115,8 +115,6 @@ local servers = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
 
-    cbfmt = {},
-    glow = {},
     markdown_oxide = {},
 }
 
