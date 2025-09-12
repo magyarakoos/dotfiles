@@ -114,6 +114,10 @@ local servers = {
     emmet_ls = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
+
+    cbfmt = {},
+    glow = {},
+    markdown_oxide = {},
 }
 
 local custom_servers = {
