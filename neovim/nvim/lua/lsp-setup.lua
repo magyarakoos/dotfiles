@@ -93,14 +93,14 @@ local servers = {
     },
 
 
-    ltex = {
-        autostart = false,
-        ltex = {
-            completionEnabled = true,
-            dictionary = { ['en-US'] = { 'uiua', 'nvim', 'vim', 'todo' } },
-            checkFrequency = 'save',
-        },
-    },
+    -- ltex = {
+    --     autostart = false,
+    --     ltex = {
+    --         completionEnabled = true,
+    --         dictionary = { ['en-US'] = { 'uiua', 'nvim', 'vim', 'todo' } },
+    --         checkFrequency = 'save',
+    --     },
+    -- },
 
     jsonls = {
         -- TODO: schema store stuff
@@ -114,7 +114,6 @@ local servers = {
     emmet_ls = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
-
     markdown_oxide = {},
 }
 
