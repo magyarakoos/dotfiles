@@ -115,6 +115,8 @@ local servers = {
         filetypes = { "html", "htmldjango", "svelte", "templ" },
     },
     markdown_oxide = {},
+
+    sqlls = {},
 }
 
 local custom_servers = {
