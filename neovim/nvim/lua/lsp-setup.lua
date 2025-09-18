@@ -117,6 +117,7 @@ local servers = {
     markdown_oxide = {},
 
     sqlls = {},
+    pgformatter = {},
 }
 
 local custom_servers = {
