@@ -72,7 +72,7 @@ local servers = {
     pyright = {},
     nil_ls = {},
     rust_analyzer = {},
-    tailwindcss = { filetypes = { 'html', 'htmldjango' } },
+    tailwindcss = { filetypes = { 'html', 'htmldjango', 'svelte' } },
     ts_ls = {},
     clangd = { filetypes = { 'c', 'cpp' } },
 
