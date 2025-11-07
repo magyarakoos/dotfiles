@@ -117,6 +117,8 @@ local servers = {
     markdown_oxide = {},
 
     sqlls = {},
+
+    csharpier = {},
 }
 
 local custom_servers = {
