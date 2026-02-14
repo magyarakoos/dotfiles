@@ -74,3 +74,4 @@ setopt glob_dots
 # Use additional Git repositories pulled in with `z4h install`.
 # z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 # z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
+eval "$(zoxide init zsh)"
