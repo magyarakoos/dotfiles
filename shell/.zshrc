@@ -26,6 +26,7 @@ alias icat='kitten icat'
 alias cat='bat' # better cat
 alias clip='xclip -selection clipboard'
 alias trm='trash-put' # move item into the trash
+alias cd='z'
 
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=#6c30f5
