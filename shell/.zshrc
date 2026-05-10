@@ -25,7 +25,7 @@ alias templ='cp ~/.config/nvim/templates/template.cpp main.cpp && vi main.cpp'
 alias icat='kitten icat'
 alias cat='bat' # better cat
 alias clip='xclip -selection clipboard'
-alias trm='trash-put' # move item into the trash
+alias rm='trash-put' # move item into the trash
 alias cd='z'
 
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan,bold
